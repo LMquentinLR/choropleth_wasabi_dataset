@@ -1,14 +1,14 @@
 {
-  "name": "ncov-choropleth",
-  "version": "1.0.0",
+  "name": "music-choropleth",
+  "version": "0.1",
   "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Quentin Le Roux",
+  "license": "Creative Commons",
   "dependencies": {
     "chroma-js": "^2.1.0",
     "data": "^0.6.1",

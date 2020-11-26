@@ -1,0 +1,5316 @@
+[
+  {
+    "name": "andorra",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 78052.6316,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "argentina",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 21993386.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 25663601.5,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 29994547.2,
+        "count": 3
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 34586241,
+        "count": 8
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 40566072.4211,
+        "count": 7
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 21993386.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 25663601.5,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 29994547.2,
+        "count": 21
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 34586241,
+        "count": 47
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 40566072.4211,
+        "count": 61
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 25663601.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 29994547.2,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 34586241,
+        "count": 12
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 40566072.4211,
+        "count": 15
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 29994547.2,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 34586241,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 40566072.4211,
+        "count": 12
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 40566072.4211,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "australia",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 11272847.7,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 13671400,
+        "count": 10
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 15709690,
+        "count": 29
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 17990310,
+        "count": 59
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 21810626.5263,
+        "count": 126
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 11272847.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 17990310,
+        "count": 6
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 21810626.5263,
+        "count": 20
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 11272847.7,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 13671400,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 15709690,
+        "count": 12
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 17990310,
+        "count": 19
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 21810626.5263,
+        "count": 94
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1980,
+        "population": 15709690,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 17990310,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 21810626.5263,
+        "count": 13
+      }
+    },
+    "genre.4": {
+      "name": "jazz",
+      "decade": {
+        "name": 1980,
+        "population": 15709690,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 21810626.5263,
+        "count": 1
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 15709690,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 17990310,
+        "count": 14
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 21810626.5263,
+        "count": 37
+      }
+    }
+  },
+  {
+    "name": "austria",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 7552151,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 7572987.6,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 7895965,
+        "count": 7
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 8374455.3684,
+        "count": 19
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 7552151,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 7572987.6,
+        "count": 8
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 7895965,
+        "count": 7
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 8374455.3684,
+        "count": 17
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1980,
+        "population": 7572987.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 7895965,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 8374455.3684,
+        "count": 4
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 7572987.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 7895965,
+        "count": 10
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 8374455.3684,
+        "count": 20
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 7895965,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 8374455.3684,
+        "count": 8
+      }
+    }
+  },
+  {
+    "name": "azerbaijan",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 8932460.8947,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "bahamas",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 187413.7,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 345387.3684,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "bangladesh",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 145539173.4211,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "belarus",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 10163173.8,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 9605621.8421,
+        "count": 5
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 9605621.8421,
+        "count": 4
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 9605621.8421,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "belgium",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 9406315.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 9871514.5,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10112122.1,
+        "count": 10
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 10823678.6316,
+        "count": 18
+      }
+    },
+    "genre.1": {
+      "name": "jazz",
+      "decade": {
+        "name": 1960,
+        "population": 9406315.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 10112122.1,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 10823678.6316,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 9769116.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 9871514.5,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10112122.1,
+        "count": 11
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 10823678.6316,
+        "count": 20
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 9871514.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 10112122.1,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 10823678.6316,
+        "count": 14
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1980,
+        "population": 9871514.5,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 10112122.1,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 10823678.6316,
+        "count": 11
+      }
+    },
+    "genre.5": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1990,
+        "population": 10112122.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 10823678.6316,
+        "count": 3
+      }
+    }
+  },
+  {
+    "name": "belize",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 314961.6842,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "bermuda",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 59777.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 64266.0526,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 59777.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 64266.0526,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "bosnia and herz.",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 4365084.5,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 3988911.5,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 3634926.5263,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "brazil",
+    "genre": {
+      "name": "jazz",
+      "decade": {
+        "name": 1960,
+        "population": 82308166.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 106185336.2,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 193259710.8947,
+        "count": 4
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 82308166.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 106185336.2,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 133682543.8,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 160713995.7,
+        "count": 1
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 193259710.8947,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 82308166.7,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 106185336.2,
+        "count": 8
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 133682543.8,
+        "count": 26
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 160713995.7,
+        "count": 32
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 193259710.8947,
+        "count": 48
+      }
+    },
+    "genre.3": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 82308166.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 106185336.2,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 133682543.8,
+        "count": 8
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 160713995.7,
+        "count": 14
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 193259710.8947,
+        "count": 26
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 133682543.8,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 160713995.7,
+        "count": 13
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 193259710.8947,
+        "count": 31
+      }
+    }
+  },
+  {
+    "name": "bulgaria",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 7484034.8947,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "canada",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 19499300.9,
+        "count": 7
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 22928791.4,
+        "count": 12
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 25788355.1,
+        "count": 16
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 29116018.5,
+        "count": 32
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 33695982.5263,
+        "count": 77
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 19499300.9,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 22928791.4,
+        "count": 27
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 25788355.1,
+        "count": 47
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 29116018.5,
+        "count": 87
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 33695982.5263,
+        "count": 229
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 22928791.4,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 25788355.1,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 29116018.5,
+        "count": 29
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 33695982.5263,
+        "count": 116
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 22928791.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 29116018.5,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 33695982.5263,
+        "count": 11
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 25788355.1,
+        "count": 9
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 29116018.5,
+        "count": 18
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 33695982.5263,
+        "count": 51
+      }
+    },
+    "genre.5": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 29116018.5,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 33695982.5263,
+        "count": 32
+      }
+    }
+  },
+  {
+    "name": "chile",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 8893466,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 10514016.8,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 12198381.7,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 14249596.6,
+        "count": 2
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 16919700.3684,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 10514016.8,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 12198381.7,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 14249596.6,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 16919700.3684,
+        "count": 9
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 16919700.3684,
+        "count": 3
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 16919700.3684,
+        "count": 4
+      }
+    }
+  },
+  {
+    "name": "china",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 1330057894.7368,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 1330057894.7368,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "colombia",
+    "genre": {
+      "name": "jazz",
+      "decade": {
+        "name": 1980,
+        "population": 29654348.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 36071914,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 29654348.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 36071914,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 44609643,
+        "count": 5
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 36071914,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 44609643,
+        "count": 5
+      }
+    }
+  },
+  {
+    "name": "costa rica",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 4507289.3158,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "croatia",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 4503836.2,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4686913.9,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 4605147.4,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 4271186.1053,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 4503836.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4686913.9,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 4605147.4,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 4271186.1053,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 4605147.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 4271186.1053,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "cuba",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 11255496.8421,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 11255496.8421,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "czechia",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 9743802.9,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 10331668.6,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10314935.6,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 10394464.7368,
+        "count": 3
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 9743802.9,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 10036899.6,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 10331668.6,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 10314935.6,
+        "count": 9
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 10394464.7368,
+        "count": 15
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 9743802.9,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 10036899.6,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 10331668.6,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 10314935.6,
+        "count": 3
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 10394464.7368,
+        "count": 5
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 10036899.6,
+        "count": 1
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 10314935.6,
+        "count": 10
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 10394464.7368,
+        "count": 17
+      }
+    },
+    "genre.5": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 10394464.7368,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "denmark",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 5039256.3,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 5121168.4,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5226887.1,
+        "count": 10
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 5533822.5263,
+        "count": 27
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 5121168.4,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 5226887.1,
+        "count": 8
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 5533822.5263,
+        "count": 36
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 5121168.4,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 5226887.1,
+        "count": 14
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 5533822.5263,
+        "count": 25
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 5226887.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 5533822.5263,
+        "count": 6
+      }
+    },
+    "genre.4": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1990,
+        "population": 5226887.1,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 5533822.5263,
+        "count": 6
+      }
+    }
+  },
+  {
+    "name": "dominican rep.",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 9567454.5789,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "egypt",
+    "genre": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 82271868.2105,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "el salvador",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 5578842.9,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 6158180.5789,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "estonia",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 1464838.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 1341910.5263,
+        "count": 10
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 1464838.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 1341910.5263,
+        "count": 10
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 1464838.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 1341910.5263,
+        "count": 3
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 1341910.5263,
+        "count": 2
+      }
+    },
+    "genre.4": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 1341910.5263,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "faroe is.",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 47755.1579,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "jazz",
+      "decade": {
+        "name": 2000,
+        "population": 47755.1579,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 47755.1579,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 47755.1579,
+        "count": 3
+      }
+    },
+    "genre.4": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 47755.1579,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "finland",
+    "genre": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 4690796.7,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 4690796.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4880735.7,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5088811.3,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 5343368.7895,
+        "count": 9
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 4690796.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4880735.7,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5088811.3,
+        "count": 3
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 5343368.7895,
+        "count": 119
+      }
+    },
+    "genre.3": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 4690796.7,
+        "count": 8
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4880735.7,
+        "count": 14
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5088811.3,
+        "count": 25
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 5343368.7895,
+        "count": 62
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 4880735.7,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 5088811.3,
+        "count": 36
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 5343368.7895,
+        "count": 112
+      }
+    },
+    "genre.5": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 5088811.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 5343368.7895,
+        "count": 4
+      }
+    }
+  },
+  {
+    "name": "france",
+    "genre": {
+      "name": "jazz",
+      "decade": {
+        "name": 1960,
+        "population": 49324172.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 53615026.8,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 64440873.0526,
+        "count": 4
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 49324172.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 53615026.8,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56517299.1,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 59402304.1,
+        "count": 2
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 64440873.0526,
+        "count": 5
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 49324172.3,
+        "count": 11
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 53615026.8,
+        "count": 18
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56517299.1,
+        "count": 24
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 59402304.1,
+        "count": 53
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 64440873.0526,
+        "count": 135
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1960,
+        "population": 49324172.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 53615026.8,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56517299.1,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 59402304.1,
+        "count": 4
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 64440873.0526,
+        "count": 31
+      }
+    },
+    "genre.4": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 49324172.3,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 53615026.8,
+        "count": 11
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56517299.1,
+        "count": 15
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 59402304.1,
+        "count": 29
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 64440873.0526,
+        "count": 74
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 56517299.1,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 59402304.1,
+        "count": 15
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 64440873.0526,
+        "count": 55
+      }
+    }
+  },
+  {
+    "name": "georgia",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 3835334.8947,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "germany",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 75497034.4,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 78446317,
+        "count": 12
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 78115794.7,
+        "count": 30
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 81244132.5,
+        "count": 80
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 81943627.2632,
+        "count": 228
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 75497034.4,
+        "count": 6
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 78446317,
+        "count": 8
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 78115794.7,
+        "count": 10
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 81244132.5,
+        "count": 11
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 81943627.2632,
+        "count": 37
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 75497034.4,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 78446317,
+        "count": 46
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 78115794.7,
+        "count": 66
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 81244132.5,
+        "count": 100
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 81943627.2632,
+        "count": 212
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 78446317,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 78115794.7,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 81244132.5,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 81943627.2632,
+        "count": 10
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1970,
+        "population": 78446317,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 78115794.7,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 81244132.5,
+        "count": 35
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 81943627.2632,
+        "count": 101
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 1970,
+        "population": 78446317,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 78115794.7,
+        "count": 27
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 81244132.5,
+        "count": 85
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 81943627.2632,
+        "count": 190
+      }
+    }
+  },
+  {
+    "name": "greece",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 8552966.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 9092496.5,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 9893238.5,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 10520353.6,
+        "count": 1
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 10942437.5789,
+        "count": 4
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 9092496.5,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 9893238.5,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 10942437.5789,
+        "count": 8
+      }
+    },
+    "genre.2": {
+      "name": "electro",
+      "decade": {
+        "name": 1970,
+        "population": 9092496.5,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 9893238.5,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10520353.6,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 10942437.5789,
+        "count": 2
+      }
+    },
+    "genre.3": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 9092496.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 10520353.6,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 10942437.5789,
+        "count": 2
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 10520353.6,
+        "count": 7
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 10942437.5789,
+        "count": 18
+      }
+    },
+    "genre.5": {
+      "name": "jazz",
+      "decade": {
+        "name": 2000,
+        "population": 10942437.5789,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "guatemala",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 8150594.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 10303011.7,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 14366594.7895,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "hong kong",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 5412910,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 6142450,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "hungary",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 10519091.8,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 10645628.7,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10325239.6,
+        "count": 5
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 9996902.5789,
+        "count": 7
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 10645628.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 10325239.6,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 9996902.5789,
+        "count": 14
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 10325239.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 9996902.5789,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "iceland",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 240227.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 266236.6,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 313399.0526,
+        "count": 10
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 240227.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 266236.6,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 313399.0526,
+        "count": 11
+      }
+    },
+    "genre.2": {
+      "name": "jazz",
+      "decade": {
+        "name": 1990,
+        "population": 266236.6,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 266236.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 313399.0526,
+        "count": 4
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 266236.6,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 313399.0526,
+        "count": 5
+      }
+    },
+    "genre.5": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 313399.0526,
+        "count": 8
+      }
+    }
+  },
+  {
+    "name": "india",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 617135472,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 955159331.2,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 1212288539.4737,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 1212288539.4737,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "indonesia",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 195251542.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 239134290.6842,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 195251542.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 239134290.6842,
+        "count": 3
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 195251542.3,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 239134290.6842,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "iran",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 73239265.2105,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 73239265.2105,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "ireland",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 2872500,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 3162225,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 3504841,
+        "count": 5
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 3616129,
+        "count": 9
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 4404254.2105,
+        "count": 15
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 2872500,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 3162225,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 3504841,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 3616129,
+        "count": 7
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 4404254.2105,
+        "count": 17
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 2872500,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 3162225,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 3504841,
+        "count": 15
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 3616129,
+        "count": 19
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 4404254.2105,
+        "count": 35
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 3616129,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 4404254.2105,
+        "count": 5
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 4404254.2105,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "israel",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 2506302,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 3392300,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 4199000,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 7518542.1053,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 3392300,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 7518542.1053,
+        "count": 4
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 3392300,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 7518542.1053,
+        "count": 2
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 1980,
+        "population": 4199000,
+        "count": 1
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 5456100,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 7518542.1053,
+        "count": 6
+      }
+    },
+    "genre.5": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 7518542.1053,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "italy",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 51884840,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 55172652.3,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56571212.4,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 56836808.6,
+        "count": 7
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 58946517.5789,
+        "count": 10
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1960,
+        "population": 51884840,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 55172652.3,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56571212.4,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 56836808.6,
+        "count": 20
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 58946517.5789,
+        "count": 68
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 51884840,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 55172652.3,
+        "count": 62
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56571212.4,
+        "count": 39
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 56836808.6,
+        "count": 85
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 58946517.5789,
+        "count": 137
+      }
+    },
+    "genre.3": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 51884840,
+        "count": 12
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 55172652.3,
+        "count": 29
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56571212.4,
+        "count": 49
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 56836808.6,
+        "count": 84
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 58946517.5789,
+        "count": 132
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1970,
+        "population": 55172652.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 56836808.6,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 58946517.5789,
+        "count": 14
+      }
+    },
+    "genre.5": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 55172652.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 56571212.4,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 56836808.6,
+        "count": 5
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 58946517.5789,
+        "count": 7
+      }
+    }
+  },
+  {
+    "name": "jamaica",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 1740637.2,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 2008320.5,
+        "count": 16
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 2303386.5,
+        "count": 12
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 2523172.5,
+        "count": 18
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 2798020.1579,
+        "count": 24
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 2008320.5,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "japan",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 98154457.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 110481300,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 120222200,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 125146800,
+        "count": 16
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 127492495.1579,
+        "count": 50
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 110481300,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 120222200,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 125146800,
+        "count": 17
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 127492495.1579,
+        "count": 62
+      }
+    },
+    "genre.2": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 110481300,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 125146800,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 127492495.1579,
+        "count": 2
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 120222200,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 125146800,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 127492495.1579,
+        "count": 10
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 125146800,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 127492495.1579,
+        "count": 13
+      }
+    }
+  },
+  {
+    "name": "kazakhstan",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 16203742.2632,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "latvia",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 2579599.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 2518773.2,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 2134049.4737,
+        "count": 5
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 2518773.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 2134049.4737,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 2134049.4737,
+        "count": 3
+      }
+    },
+    "genre.3": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 2134049.4737,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "liechtenstein",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 35749.3158,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "lithuania",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 3538185.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 3632126.4,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 3147205.2632,
+        "count": 4
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 3632126.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 3147205.2632,
+        "count": 3
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 3147205.2632,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 3147205.2632,
+        "count": 3
+      }
+    }
+  },
+  {
+    "name": "luxembourg",
+    "genre": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 507882.8947,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 507882.8947,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 507882.8947,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "macedonia",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 1995266.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 2066243.1579,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 1995266.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 2066243.1579,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 2066243.1579,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "malaysia",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 12065864.1,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 20285878,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 27549325.5263,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 27549325.5263,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "mali",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 14707046.2632,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "malta",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 374471.8,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 420053.8421,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 420053.8421,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "mexico",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 58788980,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 75122989.6,
+        "count": 10
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 90827521.7,
+        "count": 25
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 112468334.2105,
+        "count": 51
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 75122989.6,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 90827521.7,
+        "count": 18
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 112468334.2105,
+        "count": 38
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 75122989.6,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 90827521.7,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 112468334.2105,
+        "count": 8
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 90827521.7,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 112468334.2105,
+        "count": 6
+      }
+    },
+    "genre.4": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 112468334.2105,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "moldova",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 2858804.1053,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "morocco",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 32149378.8421,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 32149378.8421,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "netherlands",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 12198100.7,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 13582252.1,
+        "count": 20
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 14483892.7,
+        "count": 21
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 15399813.1,
+        "count": 23
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 16564072.4211,
+        "count": 40
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 12198100.7,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 13582252.1,
+        "count": 12
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 14483892.7,
+        "count": 12
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 15399813.1,
+        "count": 24
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 16564072.4211,
+        "count": 45
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 12198100.7,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 13582252.1,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 15399813.1,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 16564072.4211,
+        "count": 9
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 13582252.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 15399813.1,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 16564072.4211,
+        "count": 3
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 1980,
+        "population": 14483892.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 15399813.1,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 16564072.4211,
+        "count": 7
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 14483892.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 15399813.1,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 16564072.4211,
+        "count": 32
+      }
+    }
+  },
+  {
+    "name": "new zealand",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 3009660,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 3217070,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 3638560,
+        "count": 2
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 4311815.7895,
+        "count": 13
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 3009660,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 3217070,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 3638560,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 4311815.7895,
+        "count": 19
+      }
+    },
+    "genre.2": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 3638560,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 4311815.7895,
+        "count": 2
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 3638560,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 4311815.7895,
+        "count": 7
+      }
+    },
+    "genre.4": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 4311815.7895,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "nicaragua",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 5754679.6842,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "niger",
+    "genre": {
+      "name": "electro",
+      "decade": {
+        "name": 1990,
+        "population": 9388141.6,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "nigeria",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 156125598.7368,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "norway",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 3986553.4,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4151180.4,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 4347726.4,
+        "count": 8
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 4862077.8421,
+        "count": 14
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 4151180.4,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 4347726.4,
+        "count": 15
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 4862077.8421,
+        "count": 40
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 4151180.4,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 4347726.4,
+        "count": 8
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 4862077.8421,
+        "count": 34
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 4151180.4,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 4347726.4,
+        "count": 44
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 4862077.8421,
+        "count": 67
+      }
+    },
+    "genre.4": {
+      "name": "jazz",
+      "decade": {
+        "name": 1990,
+        "population": 4347726.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 4862077.8421,
+        "count": 2
+      }
+    },
+    "genre.5": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 4862077.8421,
+        "count": 11
+      }
+    }
+  },
+  {
+    "name": "pakistan",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 122543855.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 176143236.8947,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 176143236.8947,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "panama",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 3587594.7368,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "peru",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 24082046.1,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 28921384.5263,
+        "count": 4
+      }
+    }
+  },
+  {
+    "name": "philippines",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 69035948.7,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 92498179.4211,
+        "count": 3
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 69035948.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 92498179.4211,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 92498179.4211,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 92498179.4211,
+        "count": 4
+      }
+    }
+  },
+  {
+    "name": "poland",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 31171746,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 33881291.5,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 36929122.5,
+        "count": 20
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 38491748.2,
+        "count": 32
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 38102932.3158,
+        "count": 54
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 33881291.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 36929122.5,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 38491748.2,
+        "count": 13
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 38102932.3158,
+        "count": 39
+      }
+    },
+    "genre.2": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 33881291.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 38491748.2,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 38102932.3158,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 36929122.5,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 38491748.2,
+        "count": 22
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 38102932.3158,
+        "count": 47
+      }
+    },
+    "genre.4": {
+      "name": "jazz",
+      "decade": {
+        "name": 1980,
+        "population": 36929122.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 38491748.2,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 38102932.3158,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "portugal",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 8924519.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 9046655.2,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 9959453,
+        "count": 3
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 10042926.9,
+        "count": 1
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 10446392.1053,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 9046655.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 9959453,
+        "count": 6
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10042926.9,
+        "count": 11
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 10446392.1053,
+        "count": 11
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 9046655.2,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 9959453,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 10042926.9,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 10446392.1053,
+        "count": 8
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 10042926.9,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 10446392.1053,
+        "count": 8
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 10446392.1053,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "puerto rico",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 3669739,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 3662074.2632,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 3669739,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 3662074.2632,
+        "count": 23
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 3662074.2632,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "romania",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 22732740.1,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 20660532.9474,
+        "count": 3
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 20660532.9474,
+        "count": 7
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 20660532.9474,
+        "count": 4
+      }
+    }
+  },
+  {
+    "name": "russia",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 125403000,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 134010300,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 143960392.3158,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 143342500,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 148179715.9,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 143960392.3158,
+        "count": 12
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 143342500,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 148179715.9,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 143960392.3158,
+        "count": 34
+      }
+    },
+    "genre.3": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 148179715.9,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 143960392.3158,
+        "count": 12
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 143960392.3158,
+        "count": 7
+      }
+    }
+  },
+  {
+    "name": "senegal",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 6400823.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 8561012.5,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1990,
+        "population": 8561012.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 12520271.7368,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 8561012.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 12520271.7368,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "serbia",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 7620980.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 7291656.9474,
+        "count": 3
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 7620980.4,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 7291656.9474,
+        "count": 4
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 7291656.9474,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "singapore",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 4870578.4737,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 4870578.4737,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "slovakia",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 5137507.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 5397174.2105,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 5137507.1,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 5348432,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 5397174.2105,
+        "count": 11
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 5348432,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 5397174.2105,
+        "count": 6
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 2000,
+        "population": 5397174.2105,
+        "count": 1
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 5397174.2105,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "slovenia",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 1990440.7,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 1990440.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 2031793.7895,
+        "count": 1
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 1990440.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 2031793.7895,
+        "count": 3
+      }
+    }
+  },
+  {
+    "name": "south africa",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 24896146.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 32237918.4,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 40807490.8,
+        "count": 3
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 50900392.8421,
+        "count": 14
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1980,
+        "population": 32237918.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 40807490.8,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 50900392.8421,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 32237918.4,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 40807490.8,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 50900392.8421,
+        "count": 6
+      }
+    },
+    "genre.3": {
+      "name": "jazz",
+      "decade": {
+        "name": 1990,
+        "population": 40807490.8,
+        "count": 1
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 50900392.8421,
+        "count": 2
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 50900392.8421,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "south korea",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 44822354.9,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 44822354.9,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 49354439.1053,
+        "count": 15
+      }
+    }
+  },
+  {
+    "name": "spain",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 31859808.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 35546935,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 38307135.1,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 39618342.8,
+        "count": 7
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 44898207.8421,
+        "count": 10
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 31859808.3,
+        "count": 5
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 35546935,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 38307135.1,
+        "count": 15
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 39618342.8,
+        "count": 31
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 44898207.8421,
+        "count": 71
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1970,
+        "population": 35546935,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 38307135.1,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 39618342.8,
+        "count": 17
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 44898207.8421,
+        "count": 38
+      }
+    },
+    "genre.3": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 35546935,
+        "count": 3
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 38307135.1,
+        "count": 24
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 39618342.8,
+        "count": 50
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 44898207.8421,
+        "count": 72
+      }
+    },
+    "genre.4": {
+      "name": "jazz",
+      "decade": {
+        "name": 2000,
+        "population": 44898207.8421,
+        "count": 2
+      }
+    },
+    "genre.5": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 44898207.8421,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "sweden",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 7712185,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 8179524.2,
+        "count": 6
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 8366940.7,
+        "count": 16
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 8756643,
+        "count": 49
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 9369447,
+        "count": 147
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 8179524.2,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 8366940.7,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 8756643,
+        "count": 6
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 9369447,
+        "count": 16
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 8179524.2,
+        "count": 11
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 8366940.7,
+        "count": 16
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 8756643,
+        "count": 52
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 9369447,
+        "count": 112
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1980,
+        "population": 8366940.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 8756643,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 9369447,
+        "count": 25
+      }
+    },
+    "genre.4": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 8366940.7,
+        "count": 7
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 8756643,
+        "count": 76
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 9369447,
+        "count": 150
+      }
+    },
+    "genre.5": {
+      "name": "jazz",
+      "decade": {
+        "name": 1990,
+        "population": 8756643,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 9369447,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "switzerland",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1970,
+        "population": 6280239.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 6468532.2,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 6977835.6,
+        "count": 3
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 7785479.9474,
+        "count": 11
+      }
+    },
+    "genre.1": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 6280239.7,
+        "count": 4
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 6468532.2,
+        "count": 7
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 6977835.6,
+        "count": 11
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 7785479.9474,
+        "count": 19
+      }
+    },
+    "genre.2": {
+      "name": "electro",
+      "decade": {
+        "name": 1980,
+        "population": 6468532.2,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 6977835.6,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 7785479.9474,
+        "count": 4
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 6468532.2,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 6977835.6,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 7785479.9474,
+        "count": 17
+      }
+    },
+    "genre.4": {
+      "name": "jazz",
+      "decade": {
+        "name": 2000,
+        "population": 7785479.9474,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "tanzania",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 43767139.8421,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "thailand",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 66651133,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "trinidad and tobago",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 1247726.3,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "tunisia",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 2000,
+        "population": 10558774.5263,
+        "count": 1
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 10558774.5263,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "turkey",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 30670805.5,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 38863593.7,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 48558707.7,
+        "count": 5
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 58062868.5,
+        "count": 16
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 72053544.8947,
+        "count": 23
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1970,
+        "population": 38863593.7,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 48558707.7,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 58062868.5,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 72053544.8947,
+        "count": 4
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1980,
+        "population": 48558707.7,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 58062868.5,
+        "count": 8
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 72053544.8947,
+        "count": 21
+      }
+    },
+    "genre.3": {
+      "name": "metal",
+      "decade": {
+        "name": 1990,
+        "population": 58062868.5,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 72053544.8947,
+        "count": 7
+      }
+    },
+    "genre.4": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 72053544.8947,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "ukraine",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 50848987.4,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 51312386.9,
+        "count": 4
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 46399183.4211,
+        "count": 8
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 46399183.4211,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 2000,
+        "population": 46399183.4211,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "united kingdom",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 54069360,
+        "count": 23
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 29738.8,
+        "count": 34
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56575535.8,
+        "count": 25
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 57950978.5,
+        "count": 40
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 62388151.4737,
+        "count": 110
+      }
+    },
+    "genre.1": {
+      "name": "jazz",
+      "decade": {
+        "name": 1960,
+        "population": 54069360,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 29738.8,
+        "count": 12
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56575535.8,
+        "count": 7
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 57950978.5,
+        "count": 13
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 62388151.4737,
+        "count": 23
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 54069360,
+        "count": 79
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 29738.8,
+        "count": 267
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56575535.8,
+        "count": 315
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 57950978.5,
+        "count": 398
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 62388151.4737,
+        "count": 654
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1960,
+        "population": 54069360,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 56575535.8,
+        "count": 14
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 57950978.5,
+        "count": 55
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 62388151.4737,
+        "count": 134
+      }
+    },
+    "genre.4": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 54069360,
+        "count": 28
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 29738.8,
+        "count": 44
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 56575535.8,
+        "count": 146
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 57950978.5,
+        "count": 184
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 62388151.4737,
+        "count": 398
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 1970,
+        "population": 29738.8,
+        "count": 6
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 56575535.8,
+        "count": 31
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 57950978.5,
+        "count": 44
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 62388151.4737,
+        "count": 108
+      }
+    }
+  },
+  {
+    "name": "united states of america",
+    "genre": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 192498900,
+        "count": 168
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 215025900,
+        "count": 193
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 236963600,
+        "count": 183
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 264538600,
+        "count": 398
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 305679830,
+        "count": 685
+      }
+    },
+    "genre.1": {
+      "name": "jazz",
+      "decade": {
+        "name": 1960,
+        "population": 192498900,
+        "count": 29
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 215025900,
+        "count": 33
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 236963600,
+        "count": 33
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 264538600,
+        "count": 54
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 305679830,
+        "count": 82
+      }
+    },
+    "genre.2": {
+      "name": "metal",
+      "decade": {
+        "name": 1960,
+        "population": 192498900,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 236963600,
+        "count": 115
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 264538600,
+        "count": 262
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 305679830,
+        "count": 554
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 1960,
+        "population": 192498900,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 236963600,
+        "count": 9
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 264538600,
+        "count": 36
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 305679830,
+        "count": 169
+      }
+    },
+    "genre.4": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 192498900,
+        "count": 73
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 215025900,
+        "count": 80
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 236963600,
+        "count": 168
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 264538600,
+        "count": 526
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 305679830,
+        "count": 1341
+      }
+    },
+    "genre.5": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 192498900,
+        "count": 135
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 215025900,
+        "count": 282
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 236963600,
+        "count": 466
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 264538600,
+        "count": 1006
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 305679830,
+        "count": 2045
+      }
+    }
+  },
+  {
+    "name": "uruguay",
+    "genre": {
+      "name": "rock",
+      "decade": {
+        "name": 1970,
+        "population": 2839566.9,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 3001818.5,
+        "count": 1
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 3211551.2,
+        "count": 1
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 3363388.6842,
+        "count": 2
+      }
+    },
+    "genre.1": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1990,
+        "population": 3211551.2,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 3363388.6842,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "venezuela",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1980,
+        "population": 17130747.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1990,
+        "population": 21696099.7,
+        "count": 3
+      },
+      "decade.2": {
+        "name": 2000,
+        "population": 27704879.5263,
+        "count": 3
+      }
+    },
+    "genre.1": {
+      "name": "metal",
+      "decade": {
+        "name": 1980,
+        "population": 17130747.6,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 27704879.5263,
+        "count": 2
+      }
+    },
+    "genre.2": {
+      "name": "rock",
+      "decade": {
+        "name": 1990,
+        "population": 21696099.7,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 2000,
+        "population": 27704879.5263,
+        "count": 1
+      }
+    },
+    "genre.3": {
+      "name": "electro",
+      "decade": {
+        "name": 2000,
+        "population": 27704879.5263,
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "vietnam",
+    "genre": {
+      "name": "metal",
+      "decade": {
+        "name": 2000,
+        "population": 87385255.5263,
+        "count": 2
+      }
+    }
+  },
+  {
+    "name": "world",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 1960,
+        "population": 3300129243.8,
+        "count": 14
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 4023441813.3,
+        "count": 22
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 4804490235.5,
+        "count": 45
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 5662612197.6,
+        "count": 124
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 6845287530.6316,
+        "count": 737
+      }
+    },
+    "genre.1": {
+      "name": "countryfolk",
+      "decade": {
+        "name": 1960,
+        "population": 3300129243.8,
+        "count": 12
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 4023441813.3,
+        "count": 23
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 4804490235.5,
+        "count": 16
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 5662612197.6,
+        "count": 56
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 6845287530.6316,
+        "count": 224
+      }
+    },
+    "genre.2": {
+      "name": "electro",
+      "decade": {
+        "name": 1960,
+        "population": 3300129243.8,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4804490235.5,
+        "count": 5
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5662612197.6,
+        "count": 21
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 6845287530.6316,
+        "count": 143
+      }
+    },
+    "genre.3": {
+      "name": "rock",
+      "decade": {
+        "name": 1960,
+        "population": 3300129243.8,
+        "count": 14
+      },
+      "decade.1": {
+        "name": 1970,
+        "population": 4023441813.3,
+        "count": 68
+      },
+      "decade.2": {
+        "name": 1980,
+        "population": 4804490235.5,
+        "count": 82
+      },
+      "decade.3": {
+        "name": 1990,
+        "population": 5662612197.6,
+        "count": 215
+      },
+      "decade.4": {
+        "name": 2000,
+        "population": 6845287530.6316,
+        "count": 1112
+      }
+    },
+    "genre.4": {
+      "name": "jazz",
+      "decade": {
+        "name": 1970,
+        "population": 4023441813.3,
+        "count": 2
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4804490235.5,
+        "count": 2
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5662612197.6,
+        "count": 4
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 6845287530.6316,
+        "count": 20
+      }
+    },
+    "genre.5": {
+      "name": "metal",
+      "decade": {
+        "name": 1970,
+        "population": 4023441813.3,
+        "count": 1
+      },
+      "decade.1": {
+        "name": 1980,
+        "population": 4804490235.5,
+        "count": 36
+      },
+      "decade.2": {
+        "name": 1990,
+        "population": 5662612197.6,
+        "count": 134
+      },
+      "decade.3": {
+        "name": 2000,
+        "population": 6845287530.6316,
+        "count": 630
+      }
+    }
+  },
+  {
+    "name": "zambia",
+    "genre": {
+      "name": "hiphop",
+      "decade": {
+        "name": 2000,
+        "population": 13492239,
+        "count": 1
+      }
+    }
+  }
+]

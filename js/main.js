@@ -1,648 +1,694 @@
-import fetchJsonp from "fetch-jsonp";
-import swal from "sweetalert";
+// chroma.js: JavaScript library for color conversions and color scales
 import chroma from "chroma-js";
 
-// Importing the data used by the choropleth
-let rawData = require("./../data/test.txt");
+// -----------------------------------------------------------------------------
+
+// Imports of the data used to load the choropleth
+let rawData = require("./../data/music-data.txt");
+let rawWorldData = require("./../data/music-world-data.txt");
+let rawGenreData = require("./../data/genre-summary.txt");
 let world = require("./../data/countries-50m.json");
 let topoData = topojson.feature(world, world.objects.countries).features;
 
-// Declaring variables for the JSON data records and the geodata paths
+// -----------------------------------------------------------------------------
+
+// Variable declarations
 let data = {};
+let dataWorld = {};
+let dataGenre = {};
 let path = d3.geoPath(d3.geoNaturalEarth1());
 
-// Declaring global variable for rendering values (with defaults)
+// Global variable declaration
 window.rendering = {
   genre: "rock",
   time: "twothousands",
-  //interp: "interpolateCividis", //https://github.com/d3/d3-interpolate
+  description: "rock bands per 1m people",
+  lowerBound: -1,
+  upperBound: 15,
+  dataDefault: 0,
 };
 
-const interpolationMaps = {
-  "rock": "interpolateCividis",
-  "metal":"interpolateRdPu",
-  "punk":"interpolateViridis",
-  "country":"interpolateReds",
-  "hip":"interpolateYlGnBu",
-  "jazz":"interpolateYlOrRd",
-  "electro":"interpolateGreens"
-}
+const colorSchemeMap = {
+  // Map of music genre to color scheme
+  rock: "interpolateCividis",
+  metal: "interpolateRdPu",
+  punk: "interpolateViridis",
+  country: "interpolateReds",
+  hip: "interpolateYlGnBu",
+  jazz: "interpolateYlOrRd",
+  electro: "interpolateGreens",
+};
 
-//console.log(window)
-
+// -----------------------------------------------------------------------------
 let processRaw = (raw) => {
-  // Renders the name of each available country
+  // Records the name of each data-available country in the variable <data>
   raw.forEach((country) => {
     data[country.name] = country;
   });
 
-  const render = (method) => {
-    //console.log(method.style, rendering.interp)
-    
-    method.updateGlobal()
-    const currentInterp = interpolationMaps[rendering.genre]
-    const interpolation = d3[currentInterp];
-    const paint = d3
-      .scalePow()
-      .interpolate(() => d3[currentInterp])
-      .exponent(0.15)
-      .domain([-1, 50]);
+  fetch(rawWorldData)
+    .then((res) => res.json())
+    .then((rawWD) => {
 
-    d3.select("svg-frame").html("");
-    d3.select("body").style("background-color", "");
-
-    let { formula, dataDefault, properties } = method;
-    //let { formula, dataDefault, style, properties } = method
-    let formulaR = (d) => {
-      if (isNaN(formula(d))) {
-        console.warn("Invalid result for " + d.name);
-        return 0;
-      } else return formula(d);
-    };
-
-    const resetRegion = () => {
-      d3.select(".rate").html(dataDefault.toFixed(method.properties.toFixed));
-      d3.select(".city-name").html("World");
-      d3.select(".grad-bar").style(
-        "background",
-        `linear-gradient(to right,${interpolation(0.2)},${interpolation(
-          0.5
-        )},${interpolation(0.9)})`
-      );
-    };
-    resetRegion();
-
-    //d3.select(".title .light").text(properties.title);
-    d3.select(".desc").text(properties.desc);
-
-    const svg = d3
-      .select("svg-frame")
-      .append("svg")
-      .attr("viewBox", [170, -70, 630, 550]); // Global
-    //.attr("viewBox", [150, -15, 400, 300]) // Atlantic
-
-    // Creates the map within the browser window
-    const g = svg.append("g");
-    g.attr("id", "geo-paths")
-      .selectAll("path")
-      .data(topoData)
-      .join("path")
-      .attr("class", "clickable")
-      .attr("fill", (d) => {
-        let name = d.properties.name;
-        if (name.toLowerCase() in data) {
-          // data[name.toLowerCase()].used = true;
-          //data[name.toLowerCase()][method.properties.abbv] = formulaR(
-          //   d.properties
-          // );
-          return paint(formulaR(d.properties));
-        }
-        return "#222";
-      })
-      .attr("d", path)
-      .on("mouseover", (d) => {
-        let name = d.properties.name;
-        d3.select(".city-name").text(d.properties.name);
-        if (name.toLowerCase() in data) {
-          d3.select(".rate").text(
-            formulaR(d.properties).toFixed(method.properties.toFixed)
-          );
-        } else {
-          d3.select(".rate").text("N/A");
-        }
-      })
-      .on("click", (d) => {
-        let name = d.properties.name;
-        if (name.toLowerCase() in data) {
-          let c = paint(formulaR(d.properties));
-          d3.select("body").style("background-color", chroma(c).alpha(0.75));
-        } else {
-          d3.select("body").style("background-color", "");
-        }
-      })
-      .on("mouseout", (d) => {
-        resetRegion();
+      rawWD.forEach((country) => {
+        dataWorld[country.name] = country;
       });
 
-    // Zoom functionality
-    const zoom = d3.zoom().scaleExtent([0.75, 10]);
-    zoom.on("zoom", () => {
-      g.attr("transform", d3.event.transform);
+      fetch(rawGenreData)
+        .then((res) => res.json())
+        .then((rawGD) => {
+
+          rawGD.forEach((genre) => {
+            dataGenre[genre.name] = genre;
+          });
+          // ---------------------------------------------------------------------------
+          // render :: method -> IO()
+          // takes an object of class <method> and performs some IO actions
+
+          const render = (method) => {
+            // Updates the global variables stored in the object <window>
+            method.updateGlobal();
+
+            // Declares variables and functions to process the render
+            const ColorScheme = colorSchemeMap[rendering.genre];
+            const currentColorScheme = d3[ColorScheme];
+            const fillCountryColor = d3
+              .scalePow()
+              .interpolate(() => d3[ColorScheme])
+              .exponent(0.15)
+              .domain([rendering.lowerBound, rendering.upperBound]);
+            const resetRegion = () => {
+              d3.select(".rate").html(
+                rendering.dataDefault.toFixed(method.properties.toFixed)
+              );
+              d3.select(".city-name").html("World");
+              d3.select(".grad-bar").style(
+                "background",
+                `linear-gradient(to right,
+          ${currentColorScheme(0.2)},
+          ${currentColorScheme(0.5)},
+          ${currentColorScheme(0.9)})`
+              );
+            };
+            let tryCatchRenderProcessing = (d) => {
+              if (isNaN(formula(d))) {
+                console.warn("Invalid result for " + d.name);
+                return 0;
+              } else return formula(d);
+            };
+
+            // Retrieves the methods <formula>, <dataDefault>, <properties> of the object
+            // <method> passed to the function render
+            let { formula } = method;
+
+            // ---------------------------------------------------------------------------
+            // Creates the map within the browser window
+
+            resetRegion();
+            d3.select("svg-frame").html("");
+            d3.select("body").style("background-color", "");
+            d3.select(".desc").text(rendering.description);
+
+            const svg = d3
+              .select("svg-frame")
+              .append("svg")
+              //  [left/right] [up/down] [zoom in/out] [Centering]
+              //  .attr("viewBox", [170, -70, 630, 550]); // Global
+              .attr("viewBox", [170, -35, 400, 350]); // Atlantic
+
+            // var tip = d3.select(path).append("div")
+            //   .attr("class", "tooltip")
+            //   .style("opacity", 0);
+
+            const g = svg.append("g");
+            g.attr("id", "geo-paths")
+              .selectAll("path")
+              .data(topoData)
+              .join("path")
+              .attr("class", "clickable")
+              .attr("fill", (d) => {
+                let name = d.properties.name;
+                if (name.toLowerCase() in data) {
+                  return fillCountryColor(
+                    tryCatchRenderProcessing(d.properties)
+                  );
+                }
+                return "#222";
+              })
+              .attr("d", path)
+              .on("mouseover", (d) => {
+                let name = d.properties.name;
+                d3.select(".city-name").text(d.properties.name);
+                if (name.toLowerCase() in data) {
+                  d3.select(".rate").text(
+                    tryCatchRenderProcessing(d.properties).toFixed(
+                      method.properties.toFixed
+                    )
+                  );
+                  // tip.transition()		
+                  // .duration(200)		
+                  // .style("opacity", .9);
+                } else {
+                  d3.select(".rate").text("N/A");
+                };
+              })
+              .on("click", (d) => {
+                let name = d.properties.name;
+                if (name.toLowerCase() in data) {
+                  let c = fillCountryColor(
+                    tryCatchRenderProcessing(d.properties)
+                  );
+                  d3.select("body").style(
+                    "background-color",
+                    chroma(c).alpha(0.75)
+                  );
+                } else {
+                  d3.select("body").style("background-color", "");
+                }
+              })
+              .on("mouseout", () => {
+                resetRegion();
+                // tip.transition()		
+                // .duration(500)		
+                // .style("opacity", 0);	
+              });
+
+            // ---------------------------------------------------------------------------
+            // Zoom functionality
+
+            const zoom = d3.zoom().scaleExtent([0.75, 10]);
+            zoom.on("zoom", () => {
+              g.attr("transform", d3.event.transform);
+            });
+            svg.call(zoom);
+
+            // Warning message if a country in the source JSON is not used
+            //for (let country in data) {if (!data[country].used) console.warn("Unused country", country);}
+          };
+
+          // ---------------------------------------------------------------------------
+          // Lists the methods of type 'decades'
+          let decades = {
+            two_thousands: {
+              updateGlobal: () => {
+                rendering.time = "twothousands";
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "2000",
+                abbv: "2000s",
+                toFixed: 2,
+              },
+            },
+
+            nineties: {
+              updateGlobal: () => {
+                rendering.time = "nineties";
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "1990s",
+                abbv: "90s",
+                toFixed: 2,
+              },
+            },
+
+            eighties: {
+              updateGlobal: () => {
+                rendering.time = "eighties";
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "1980s",
+                abbv: "80s",
+                toFixed: 2,
+              },
+            },
+
+            seventies: {
+              updateGlobal: () => {
+                rendering.time = "seventies";
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "1970s",
+                abbv: "70s",
+                toFixed: 2,
+              },
+            },
+
+            sixties: {
+              updateGlobal: () => {
+                rendering.time = "sixties";
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000);
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "1960s",
+                abbv: "60s",
+                toFixed: 2,
+              },
+            },
+          };
+
+          // ---------------------------------------------------------------------------
+          // Lists the methods of type 'musicGenres'
+
+          let musicGenres = {
+            rock: {
+              updateGlobal: () => {
+                rendering.genre = "rock";
+                rendering.description = "rock bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 10;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              properties: {
+                title: "Rock",
+                abbv: "rock",
+                toFixed: 2,
+              },
+            },
+            metal: {
+              updateGlobal: () => {
+                rendering.genre = "metal";
+                rendering.description = "metal bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 30;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "Metal",
+                abbv: "metal",
+                toFixed: 2,
+              },
+            },
+            punk: {
+              updateGlobal: () => {
+                rendering.genre = "punk";
+                rendering.description = "punk bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 5;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "Punk",
+                abbv: "punk",
+                toFixed: 2,
+              },
+            },
+            countryfolk: {
+              updateGlobal: () => {
+                rendering.genre = "country";
+                rendering.description =
+                  "Country, folk & reggae bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 3;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "Country and Folk",
+                abbv: "country&folk",
+                toFixed: 2,
+              },
+            },
+            hiphop: {
+              updateGlobal: () => {
+                rendering.genre = "hip";
+                rendering.description =
+                  "Hip-Hop, Pop & Rap bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 60;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "Hip Hop, Pop and Rap",
+                abbv: "hip-hop&rap",
+                toFixed: 2,
+              },
+            },
+            jazz: {
+              updateGlobal: () => {
+                rendering.genre = "jazz";
+                rendering.description = "Jazz bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 2;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "Jazz",
+                abbv: "jazz",
+                toFixed: 2,
+              },
+            },
+            electro: {
+              updateGlobal: () => {
+                rendering.genre = "electro";
+                rendering.description = "Electro bands per 1m people";
+                rendering.lowerBound = -1;
+                rendering.upperBound = 30;
+                rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
+                (data["world"].data["rock"][rendering.time]["population"]/1000000)
+              },
+              formula: (dProp) => {
+                let countryName = dProp.name.toLowerCase();
+                if (
+                  data[countryName].data[rendering.genre][rendering.time][
+                    "population"
+                  ] == 0
+                ) {
+                  return 0;
+                } else {
+                  let count = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "count"
+                    ]
+                  );
+                  let population = Number(
+                    data[countryName].data[rendering.genre][rendering.time][
+                      "population"
+                    ]
+                  );
+                  let val = count / (population / 1000000);
+                  return val;
+                }
+              },
+              dataDefault: 0,
+              properties: {
+                title: "Electronic, Dubstep, EDM, Synth",
+                abbv: "electronic",
+                toFixed: 2,
+              },
+            },
+          };
+
+          for (let musicGenre in musicGenres) {
+            d3.select(".musicGenres")
+              .append("input")
+              .attr("type", "radio")
+              .attr("name", "method-ratio")
+              .attr("id", musicGenre)
+              .on("click", () => render(musicGenres[musicGenre]));
+
+            d3.select(".musicGenres")
+              .append("label")
+              .attr("for", musicGenre)
+              .attr("class", "clickable")
+              .text(musicGenres[musicGenre].properties.abbv);
+          }
+
+          for (let decade in decades) {
+            d3.select(".decades")
+              .append("input")
+              .attr("type", "radio")
+              .attr("name", "method-ratio")
+              .attr("id", decade)
+              .on("click", () => render(decades[decade]));
+
+            d3.select(".decades")
+              .append("label")
+              .attr("for", decade)
+              .attr("class", "clickable")
+              .text(decades[decade].properties.abbv);
+          }
+
+          // Fire the first render
+          document.querySelector('label[for="rock"]').click();
+        });
     });
-    svg.call(zoom);
-
-    // Warning message if a country in the source JSON is not used
-    //for (let country in data) {if (!data[country].used) console.warn("Unused country", country);}
-  };
-
-  /*
-    ----------------------
-    DATES
-    ----------------------
-    */
-  let decades = {
-    two_thousands: {
-      updateGlobal: () => {
-        rendering.time = "twothousands";
-      },
-      formula: (dProp) => {
-        //rendering.time = "twothousands";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "2000",
-        abbv: "2000s",
-        desc: "test_dec",
-        toFixed: 3,
-      },
-    },
-    nineties: {
-      updateGlobal: () => {
-        rendering.time = "nineties";
-      },
-      formula: (dProp) => {
-        //rendering.time = "nineties";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        //console.log(`Current genre: ${rendering.genre}. Interpolation: ${interpolationMaps[rendering.genre]}`)
-        //console.log(`Current genre: ${rendering.genre}. Interpolation: ${rendering.interp}`)
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "1990s",
-        abbv: "90s",
-        desc: "test_dec",
-        toFixed: 3,
-      },
-    },
-    eighties: {
-      updateGlobal: () => {
-        rendering.time = "eighties";
-      },
-      formula: (dProp) => {
-        //rendering.time = "eighties";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "1980s",
-        abbv: "80s",
-        desc: "test_dec",
-        toFixed: 3,
-      },
-    },
-    seventies: {
-      updateGlobal: () => {
-        rendering.time = "seventies";
-      },
-      formula: (dProp) => {
-        //rendering.time = "seventies";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "1970s",
-        abbv: "70s",
-        desc: "test_dec",
-        toFixed: 3,
-      },
-    },
-    sixties: {
-      updateGlobal: () => {
-        rendering.time = "sixties";
-      },
-      formula: (dProp) => {
-        //rendering.time = "sixties";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "1960s",
-        abbv: "60s",
-        desc: "test_dec",
-        toFixed: 3,
-      },
-    },
-  };
-  /*
-    ----------------------
-    METHODS
-    ----------------------
-    */
-  let methods = {
-    rock: {
-      updateGlobal: () => {
-        rendering.genre = "rock";
-        //rendering.interp = "interpolateCividis";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "rock";
-        //rendering.interp = "interpolateCividis";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Rock",
-        abbv: "rock",
-        desc: "rock bands per 1m people",
-        toFixed: 3,
-      },
-    },
-    metal: {
-      //rendering.interp -> interpolationMaps[rendering.genre]
-      updateGlobal: () => {
-        rendering.genre = "metal";
-        //rendering.interp = "interpolateRdPu";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "metal";
-        //rendering.interp = "interpolateRdPu";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Metal",
-        abbv: "metal",
-        desc: "metal bands per 1m people",
-        toFixed: 3,
-      },
-    },
-    punk: {
-      updateGlobal: () => {
-        rendering.genre = "punk";
-       //rendering.interp = "interpolateViridis";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "punk";
-        //rendering.interp = "interpolateViridis";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Punk",
-        abbv: "punk",
-        desc: "punk bands per 1m people",
-        toFixed: 3,
-      },
-    },
-    countryfolk: {
-      updateGlobal: () => {
-        rendering.genre = "country";
-        //rendering.interp = "interpolateReds";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "country";
-        //rendering.interp = "interpolateReds";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Country and Folk",
-        abbv: "country&folk",
-        desc: "Country, folk & reggae bands per 1m people",
-        toFixed: 3,
-      },
-    },
-    hiphop: {
-      updateGlobal: () => {
-        rendering.genre = "hip";
-        //rendering.interp = "interpolateYlGnBu";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "hip";
-        //rendering.interp = "interpolateYlGnBu";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Hip Hop, Pop and Rap",
-        abbv: "hip-hop&rap",
-        desc: "Hip-Hop, Pop & Rap bands per 1m people",
-        toFixed: 3,
-      },
-    },
-    jazz: {
-      updateGlobal: () => {
-        rendering.genre = "jazz";
-        //rendering.interp = "interpolateYlOrRd";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "jazz";
-        //rendering.interp = "interpolateYlOrRd";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Jazz",
-        abbv: "jazz",
-        desc: "Jazz bands per 1m people",
-        toFixed: 3,
-      },
-    },
-    electro: {
-      updateGlobal: () => {
-        rendering.genre = "metal";
-        //rendering.interp = "interpolateGreens";
-      },
-      formula: (dProp) => {
-        //rendering.genre = "electro";
-        //rendering.interp = "interpolateGreens";
-        //console.log(rendering.genre, rendering.time, rendering.interp);
-        let nm = dProp.name.toLowerCase();
-        if (data[nm].data[rendering.genre][rendering.time]["population"] == 0) {
-          return 0;
-        } else {
-          let val =
-            (Number(data[nm].data[rendering.genre][rendering.time]["count"]) /
-              (Number(
-                data[nm].data[rendering.genre][rendering.time]["population"]
-              ) /
-                1000000)) *
-            10;
-          return val;
-        }
-      },
-      dataDefault: 0,
-      // style: {
-      //   paint: d3
-      //     .scalePow()
-      //     .interpolate(() => d3[rendering.interp])
-      //     .exponent(0.15)
-      //     .domain([-1, 50]),
-      //   interpolation: d3[rendering.interp]
-      // },
-      properties: {
-        title: "Electronic, Dubstep, EDM, Synth",
-        abbv: "electronic",
-        desc: "Electro bands per 1m people",
-        toFixed: 3,
-      },
-    },
-  };
-
-  for (let method in methods) {
-    d3.select(".methods")
-      .append("input")
-      .attr("type", "radio")
-      .attr("name", "method-ratio")
-      .attr("id", method)
-      .on("click", () => render(methods[method]));
-
-    d3.select(".methods")
-      .append("label")
-      .attr("for", method)
-      .attr("class", "clickable")
-      .text(methods[method].properties.abbv);
-  }
-
-  for (let decade in decades) {
-    d3.select(".decades")
-      .append("input")
-      .attr("type", "radio")
-      .attr("name", "method-ratio")
-      .attr("id", decade)
-      .on("click", () => render(decades[decade]));
-
-    d3.select(".decades")
-      .append("label")
-      .attr("for", decade)
-      .attr("class", "clickable")
-      .text(decades[decade].properties.abbv);
-  }
-
-  // Fire the first render
-  document.querySelector('label[for="rock"]').click();
 };
 
 document.body.addEventListener("mousemove", (e) => {

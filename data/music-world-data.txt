@@ -24,28 +24,28 @@
     "sixties": 9,
     "seventies": 23,
     "eighties": 61,
-    "nineties": 121,
-    "twothousands": 189
+    "nineties": 122,
+    "twothousands": 191
   }
 }
 ,{
   "name": "australia",
   "data": {
-    "sixties": 7,
-    "seventies": 24,
-    "eighties": 96,
-    "nineties": 206,
-    "twothousands": 527
+    "sixties": 10,
+    "seventies": 30,
+    "eighties": 105,
+    "nineties": 224,
+    "twothousands": 595
   }
 }
 ,{
   "name": "austria",
   "data": {
     "sixties": 9,
-    "seventies": 20,
-    "eighties": 29,
-    "nineties": 54,
-    "twothousands": 146
+    "seventies": 21,
+    "eighties": 31,
+    "nineties": 61,
+    "twothousands": 156
   }
 }
 ,{
@@ -56,6 +56,16 @@
     "eighties": 0,
     "nineties": 0,
     "twothousands": 2
+  }
+}
+,{
+  "name": "bahamas",
+  "data": {
+    "sixties": 0,
+    "seventies": 1,
+    "eighties": 0,
+    "nineties": 1,
+    "twothousands": 3
   }
 }
 ,{
@@ -94,8 +104,8 @@
     "sixties": 0,
     "seventies": 0,
     "eighties": 0,
-    "nineties": 3,
-    "twothousands": 10
+    "nineties": 4,
+    "twothousands": 12
   }
 }
 ,{
@@ -105,7 +115,7 @@
     "seventies": 7,
     "eighties": 27,
     "nineties": 81,
-    "twothousands": 175
+    "twothousands": 176
   }
 }
 ,{
@@ -139,7 +149,7 @@
   }
 }
 ,{
-  "name": "bosnia and herzegovina",
+  "name": "bosnia and herz.",
   "data": {
     "sixties": 0,
     "seventies": 0,
@@ -151,11 +161,11 @@
 ,{
   "name": "brazil",
   "data": {
-    "sixties": 55,
-    "seventies": 99,
-    "eighties": 123,
-    "nineties": 183,
-    "twothousands": 307
+    "sixties": 56,
+    "seventies": 100,
+    "eighties": 127,
+    "nineties": 194,
+    "twothousands": 325
   }
 }
 ,{
@@ -201,11 +211,11 @@
 ,{
   "name": "canada",
   "data": {
-    "sixties": 25,
-    "seventies": 76,
-    "eighties": 156,
-    "nineties": 415,
-    "twothousands": 1069
+    "sixties": 29,
+    "seventies": 86,
+    "eighties": 170,
+    "nineties": 470,
+    "twothousands": 1212
   }
 }
 ,{
@@ -215,7 +225,7 @@
     "seventies": 7,
     "eighties": 9,
     "nineties": 25,
-    "twothousands": 65
+    "twothousands": 66
   }
 }
 ,{
@@ -235,7 +245,7 @@
     "seventies": 0,
     "eighties": 4,
     "nineties": 13,
-    "twothousands": 25
+    "twothousands": 27
   }
 }
 ,{
@@ -269,7 +279,7 @@
   }
 }
 ,{
-  "name": "czech republic",
+  "name": "czechia",
   "data": {
     "sixties": 5,
     "seventies": 7,
@@ -285,11 +295,11 @@
     "seventies": 9,
     "eighties": 19,
     "nineties": 78,
-    "twothousands": 212
+    "twothousands": 220
   }
 }
 ,{
-  "name": "dominican republic",
+  "name": "dominican rep.",
   "data": {
     "sixties": 0,
     "seventies": 0,
@@ -299,17 +309,37 @@
   }
 }
 ,{
+  "name": "egypt",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 0,
+    "nineties": 0,
+    "twothousands": 5
+  }
+}
+,{
+  "name": "el salvador",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 0,
+    "nineties": 1,
+    "twothousands": 1
+  }
+}
+,{
   "name": "estonia",
   "data": {
     "sixties": 0,
     "seventies": 0,
     "eighties": 0,
     "nineties": 6,
-    "twothousands": 41
+    "twothousands": 42
   }
 }
 ,{
-  "name": "faroe islands",
+  "name": "faroe is.",
   "data": {
     "sixties": 0,
     "seventies": 0,
@@ -324,18 +354,18 @@
     "sixties": 3,
     "seventies": 25,
     "eighties": 55,
-    "nineties": 194,
-    "twothousands": 647
+    "nineties": 199,
+    "twothousands": 666
   }
 }
 ,{
   "name": "france",
   "data": {
     "sixties": 76,
-    "seventies": 123,
-    "eighties": 143,
-    "nineties": 331,
-    "twothousands": 799
+    "seventies": 125,
+    "eighties": 148,
+    "nineties": 339,
+    "twothousands": 832
   }
 }
 ,{
@@ -351,11 +381,11 @@
 ,{
   "name": "germany",
   "data": {
-    "sixties": 56,
-    "seventies": 188,
-    "eighties": 298,
-    "nineties": 705,
-    "twothousands": 1681
+    "sixties": 57,
+    "seventies": 189,
+    "eighties": 308,
+    "nineties": 731,
+    "twothousands": 1772
   }
 }
 ,{
@@ -384,8 +414,8 @@
     "sixties": 3,
     "seventies": 10,
     "eighties": 9,
-    "nineties": 28,
-    "twothousands": 65
+    "nineties": 30,
+    "twothousands": 71
   }
 }
 ,{
@@ -429,13 +459,23 @@
   }
 }
 ,{
+  "name": "hong kong",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 3,
+    "nineties": 3,
+    "twothousands": 3
+  }
+}
+,{
   "name": "hungary",
   "data": {
     "sixties": 2,
     "seventies": 4,
     "eighties": 7,
     "nineties": 29,
-    "twothousands": 50
+    "twothousands": 53
   }
 }
 ,{
@@ -445,7 +485,7 @@
     "seventies": 1,
     "eighties": 3,
     "nineties": 17,
-    "twothousands": 59
+    "twothousands": 63
   }
 }
 ,{
@@ -469,13 +509,23 @@
   }
 }
 ,{
+  "name": "iran",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 0,
+    "nineties": 1,
+    "twothousands": 5
+  }
+}
+,{
   "name": "ireland",
   "data": {
-    "sixties": 7,
-    "seventies": 14,
-    "eighties": 41,
-    "nineties": 84,
-    "twothousands": 151
+    "sixties": 9,
+    "seventies": 17,
+    "eighties": 43,
+    "nineties": 86,
+    "twothousands": 156
   }
 }
 ,{
@@ -495,17 +545,17 @@
     "seventies": 6,
     "eighties": 5,
     "nineties": 13,
-    "twothousands": 38
+    "twothousands": 39
   }
 }
 ,{
   "name": "italy",
   "data": {
     "sixties": 32,
-    "seventies": 136,
-    "eighties": 162,
+    "seventies": 137,
+    "eighties": 163,
     "nineties": 370,
-    "twothousands": 664
+    "twothousands": 674
   }
 }
 ,{
@@ -524,8 +574,8 @@
     "sixties": 2,
     "seventies": 7,
     "eighties": 25,
-    "nineties": 99,
-    "twothousands": 353
+    "nineties": 102,
+    "twothousands": 359
   }
 }
 ,{
@@ -599,6 +649,16 @@
   }
 }
 ,{
+  "name": "macedonia",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 0,
+    "nineties": 2,
+    "twothousands": 5
+  }
+}
+,{
   "name": "madagascar",
   "data": {
     "sixties": 0,
@@ -644,8 +704,8 @@
     "sixties": 2,
     "seventies": 8,
     "eighties": 36,
-    "nineties": 100,
-    "twothousands": 223
+    "nineties": 101,
+    "twothousands": 224
   }
 }
 ,{
@@ -683,9 +743,9 @@
   "data": {
     "sixties": 17,
     "seventies": 62,
-    "eighties": 75,
-    "nineties": 144,
-    "twothousands": 312
+    "eighties": 76,
+    "nineties": 145,
+    "twothousands": 320
   }
 }
 ,{
@@ -694,8 +754,8 @@
     "sixties": 0,
     "seventies": 8,
     "eighties": 12,
-    "nineties": 25,
-    "twothousands": 106
+    "nineties": 28,
+    "twothousands": 112
   }
 }
 ,{
@@ -713,7 +773,7 @@
   "data": {
     "sixties": 0,
     "seventies": 0,
-    "eighties": 1,
+    "eighties": 0,
     "nineties": 1,
     "twothousands": 0
   }
@@ -734,8 +794,8 @@
     "sixties": 0,
     "seventies": 7,
     "eighties": 25,
-    "nineties": 156,
-    "twothousands": 344
+    "nineties": 161,
+    "twothousands": 359
   }
 }
 ,{
@@ -785,7 +845,7 @@
     "seventies": 14,
     "eighties": 46,
     "nineties": 154,
-    "twothousands": 338
+    "twothousands": 347
   }
 }
 ,{
@@ -794,8 +854,8 @@
     "sixties": 3,
     "seventies": 14,
     "eighties": 24,
-    "nineties": 47,
-    "twothousands": 81
+    "nineties": 48,
+    "twothousands": 82
   }
 }
 ,{
@@ -812,10 +872,20 @@
   "name": "romania",
   "data": {
     "sixties": 1,
-    "seventies": 3,
+    "seventies": 2,
     "eighties": 2,
     "nineties": 7,
-    "twothousands": 37
+    "twothousands": 36
+  }
+}
+,{
+  "name": "russia",
+  "data": {
+    "sixties": 1,
+    "seventies": 1,
+    "eighties": 2,
+    "nineties": 34,
+    "twothousands": 149
   }
 }
 ,{
@@ -844,8 +914,8 @@
     "sixties": 0,
     "seventies": 0,
     "eighties": 0,
-    "nineties": 10,
-    "twothousands": 19
+    "nineties": 13,
+    "twothousands": 23
   }
 }
 ,{
@@ -859,13 +929,23 @@
   }
 }
 ,{
+  "name": "slovakia",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 4,
+    "nineties": 16,
+    "twothousands": 37
+  }
+}
+,{
   "name": "slovenia",
   "data": {
     "sixties": 0,
     "seventies": 0,
     "eighties": 1,
     "nineties": 9,
-    "twothousands": 10
+    "twothousands": 11
   }
 }
 ,{
@@ -875,17 +955,27 @@
     "seventies": 5,
     "eighties": 14,
     "nineties": 18,
-    "twothousands": 73
+    "twothousands": 74
+  }
+}
+,{
+  "name": "south korea",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 0,
+    "nineties": 5,
+    "twothousands": 45
   }
 }
 ,{
   "name": "spain",
   "data": {
-    "sixties": 12,
-    "seventies": 31,
-    "eighties": 78,
-    "nineties": 188,
-    "twothousands": 426
+    "sixties": 14,
+    "seventies": 34,
+    "eighties": 81,
+    "nineties": 198,
+    "twothousands": 447
   }
 }
 ,{
@@ -893,9 +983,9 @@
   "data": {
     "sixties": 6,
     "seventies": 39,
-    "eighties": 80,
-    "nineties": 391,
-    "twothousands": 910
+    "eighties": 81,
+    "nineties": 400,
+    "twothousands": 940
   }
 }
 ,{
@@ -903,9 +993,19 @@
   "data": {
     "sixties": 4,
     "seventies": 12,
-    "eighties": 20,
-    "nineties": 39,
-    "twothousands": 96
+    "eighties": 22,
+    "nineties": 43,
+    "twothousands": 101
+  }
+}
+,{
+  "name": "tanzania",
+  "data": {
+    "sixties": 0,
+    "seventies": 0,
+    "eighties": 0,
+    "nineties": 0,
+    "twothousands": 1
   }
 }
 ,{
@@ -943,9 +1043,9 @@
   "data": {
     "sixties": 2,
     "seventies": 15,
-    "eighties": 20,
-    "nineties": 61,
-    "twothousands": 113
+    "eighties": 21,
+    "nineties": 62,
+    "twothousands": 116
   }
 }
 ,{
@@ -965,7 +1065,7 @@
     "seventies": 0,
     "eighties": 1,
     "nineties": 8,
-    "twothousands": 29
+    "twothousands": 32
   }
 }
 ,{
@@ -981,21 +1081,21 @@
 ,{
   "name": "united kingdom",
   "data": {
-    "sixties": 210,
-    "seventies": 627,
-    "eighties": 1036,
-    "nineties": 1353,
-    "twothousands": 2678
+    "sixties": 213,
+    "seventies": 637,
+    "eighties": 1053,
+    "nineties": 1393,
+    "twothousands": 2855
   }
 }
 ,{
-  "name": "united states",
+  "name": "united states of america",
   "data": {
-    "sixties": 819,
-    "seventies": 1250,
-    "eighties": 1948,
-    "nineties": 4637,
-    "twothousands": 9207
+    "sixties": 841,
+    "seventies": 1296,
+    "eighties": 2017,
+    "nineties": 4869,
+    "twothousands": 9983
   }
 }
 ,{
@@ -1006,6 +1106,16 @@
     "eighties": 5,
     "nineties": 15,
     "twothousands": 18
+  }
+}
+,{
+  "name": "venezuela",
+  "data": {
+    "sixties": 1,
+    "seventies": 2,
+    "eighties": 9,
+    "nineties": 12,
+    "twothousands": 23
   }
 }
 ,{
@@ -1021,11 +1131,11 @@
 ,{
   "name": "world",
   "data": {
-    "sixties": 1406,
-    "seventies": 2941,
-    "eighties": 4763,
-    "nineties": 10679,
-    "twothousands": 22840
+    "sixties": 1446,
+    "seventies": 3028,
+    "eighties": 4921,
+    "nineties": 11203,
+    "twothousands": 24611
   }
 }
 ,{

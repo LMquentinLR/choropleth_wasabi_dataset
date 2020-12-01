@@ -22,7 +22,7 @@ let path = d3.geoPath(d3.geoNaturalEarth1());
 window.rendering = {
   genre: "rock",
   time: "twothousands",
-  description: "rock bands per 1m people",
+  description: "rock bands referenced per 1m people",
   lowerBound: -1,
   upperBound: 15,
   dataDefault: 0,
@@ -116,9 +116,12 @@ let processRaw = (raw) => {
               //  .attr("viewBox", [170, -70, 630, 550]); // Global
               .attr("viewBox", [170, -35, 400, 350]); // Atlantic
 
-            // var tip = d3.select(path).append("div")
-            //   .attr("class", "tooltip")
-            //   .style("opacity", 0);
+            // ----------------------------
+              var tip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("color","black")
+                .style("opacity", 0).style("z-index", "100");
+            // ----------------------------
 
             const g = svg.append("g");
             g.attr("id", "geo-paths")
@@ -129,6 +132,7 @@ let processRaw = (raw) => {
               .attr("fill", (d) => {
                 let name = d.properties.name;
                 if (name.toLowerCase() in data) {
+                  data[name.toLowerCase()].used = true;
                   return fillCountryColor(
                     tryCatchRenderProcessing(d.properties)
                   );
@@ -145,9 +149,29 @@ let processRaw = (raw) => {
                       method.properties.toFixed
                     )
                   );
-                  // tip.transition()		
-                  // .duration(200)		
-                  // .style("opacity", .9);
+                  // ----------------------------
+                  if (data[name.toLowerCase()].data[rendering.genre][rendering.time]["count"] != 0) {
+                    console.log(name)
+                    let count = data[name.toLowerCase()].data[rendering.genre][rendering.time]["count"];
+                    let averagePop = Math.round(data[name.toLowerCase()].data[rendering.genre][rendering.time]["population"]/10000)/100;
+                    let totalCountryBands = dataWorld[name.toLowerCase()].data[rendering.time];
+                    let test = `Number of referenced ${rendering.genre} bands in ${name}:<br>` +
+                    `<b>${count}</b>, i.e. ${Math.round(count*100/totalCountryBands)}% of total ref. bands` + 
+                    `<hr>Average population of ${name} during the period:<br><b>${averagePop}m</b>`;
+                    tip.html(test)
+                    .transition().duration(600).style("opacity", .9)
+                    .style("height", "100px")
+                    .style("left", d3.event.pageX + "px")     
+                    .style("top", d3.event.pageY + "px"); 
+                  } else {
+                    let test = `No "${rendering.genre}" band was referenced during the period in ${name}.`;
+                    tip.html(test)
+                    .transition().duration(600).style("opacity", .9)
+                    .style("height", "40px")
+                    .style("left", d3.event.pageX + "px")     
+                    .style("top", d3.event.pageY + "px"); 
+                  };
+                  // ----------------------------
                 } else {
                   d3.select(".rate").text("N/A");
                 };
@@ -168,9 +192,9 @@ let processRaw = (raw) => {
               })
               .on("mouseout", () => {
                 resetRegion();
-                // tip.transition()		
-                // .duration(500)		
-                // .style("opacity", 0);	
+                // ----------------------------
+                 tip.transition().duration(600).style("opacity", 0);
+                 // ----------------------------
               });
 
             // ---------------------------------------------------------------------------
@@ -183,7 +207,7 @@ let processRaw = (raw) => {
             svg.call(zoom);
 
             // Warning message if a country in the source JSON is not used
-            //for (let country in data) {if (!data[country].used) console.warn("Unused country", country);}
+            for (let country in data) {if (!data[country].used) console.warn("Unused country", country);}
           };
 
           // ---------------------------------------------------------------------------
@@ -382,7 +406,7 @@ let processRaw = (raw) => {
             rock: {
               updateGlobal: () => {
                 rendering.genre = "rock";
-                rendering.description = "rock bands per 1m people";
+                rendering.description = "rock bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 10;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -420,7 +444,7 @@ let processRaw = (raw) => {
             metal: {
               updateGlobal: () => {
                 rendering.genre = "metal";
-                rendering.description = "metal bands per 1m people";
+                rendering.description = "metal bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 30;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -459,7 +483,7 @@ let processRaw = (raw) => {
             punk: {
               updateGlobal: () => {
                 rendering.genre = "punk";
-                rendering.description = "punk bands per 1m people";
+                rendering.description = "punk bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 5;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -499,7 +523,7 @@ let processRaw = (raw) => {
               updateGlobal: () => {
                 rendering.genre = "country";
                 rendering.description =
-                  "Country, folk & reggae bands per 1m people";
+                  "Country, folk & reggae bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 3;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -539,7 +563,7 @@ let processRaw = (raw) => {
               updateGlobal: () => {
                 rendering.genre = "hip";
                 rendering.description =
-                  "Hip-Hop, Pop & Rap bands per 1m people";
+                  "Hip-Hop, Pop & Rap bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 60;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -578,7 +602,7 @@ let processRaw = (raw) => {
             jazz: {
               updateGlobal: () => {
                 rendering.genre = "jazz";
-                rendering.description = "Jazz bands per 1m people";
+                rendering.description = "Jazz bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 2;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -617,7 +641,7 @@ let processRaw = (raw) => {
             electro: {
               updateGlobal: () => {
                 rendering.genre = "electro";
-                rendering.description = "Electro bands per 1m people";
+                rendering.description = "Electro bands referenced per 1m people";
                 rendering.lowerBound = -1;
                 rendering.upperBound = 30;
                 rendering.dataDefault = dataGenre[rendering.genre].data[rendering.time]/
@@ -681,7 +705,7 @@ let processRaw = (raw) => {
             d3.select(".decades")
               .append("label")
               .attr("for", decade)
-              .attr("class", "clickable")
+              .attr("class", "clickable2")
               .text(decades[decade].properties.abbv);
           }
 

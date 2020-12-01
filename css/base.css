@@ -163,6 +163,10 @@ a,
 .clickable {
   pointer-events: all;
 }
+a,
+.clickable2 {
+  pointer-events: all;
+}
 
 strong, h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
@@ -186,14 +190,15 @@ strong, h1, h2, h3, h4, h5, h6 {
 .tooltip {
   position: absolute;
   text-align: center;
-  width: 80px;
-  height: 14px;
+  width: 200px;
   padding: 2px;
   font: 12px sans-serif;
   background: lightsteelblue;
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4)
 }
 
 #geo-paths {

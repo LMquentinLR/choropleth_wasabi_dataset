@@ -197,4 +197,3 @@ merge_files(INPUT_FOLDER = "./data_total/", CONCAT_DELIMITER=",",
 
 file <- paste("[",read_file("music-world-data.txt"),"]",sep="")
 write(file, "music-world-data.txt")
-

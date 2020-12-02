@@ -23,6 +23,8 @@ country_name_matcher <- read_csv("countries.csv")
 ### PRE-PROCESSING THE ALBUM DATASET
 
 sift_df <- function(df, filter_string, name, save=FALSE) {
+  # filters a dataframe for the rows that fulfils a condition on their <genre> 
+  # column
   new_df <- df %>% mutate(genre = tolower(genre)) %>% 
     filter(grepl(paste(filter_string, collapse="|"), genre)) %>% 
     select(genre) %>% distinct(genre)
@@ -30,6 +32,7 @@ sift_df <- function(df, filter_string, name, save=FALSE) {
   return(new_df$genre)
 }
 
+# Creates the vectors of tag families to filter for
 rock_lst <- c("rock")
 metal_lst <- c("metal")
 punk_lst <- c("punk")
@@ -38,6 +41,7 @@ hip_hop_rap_lst <- c("hip","hop","pop","rap", "reggae", "americana")
 jazz_lst <- c("jazz")
 electro_lst <- c("electro","dubstep","drum and bass", "synth", "ebm", "tech")
 
+# Creates the list of genres to be kept
 rock_genres <- sift_df(albums_lite_choro, rock_lst, "rock")
 metal_genres <- sift_df(albums_lite_choro, metal_lst, "metal")
 punk_genres <- sift_df(albums_lite_choro, punk_lst, "punk")
@@ -45,14 +49,13 @@ country_folk_genres <- sift_df(albums_lite_choro, country_folk_lst, "countr_folk
 hihop_pop_genres <- sift_df(albums_lite_choro, hip_hop_rap_lst, "hip-hop_pop")
 jazz_genres <- sift_df(albums_lite_choro, jazz_lst, "jazz")
 electro_genres <- sift_df(albums_lite_choro, electro_lst, "electro")
-
 kept_genres <- c(rock_genres, metal_genres, punk_genres, country_folk_genres, 
                  hihop_pop_genres, jazz_genres, electro_genres, electro_genres)
 
-# 1. Drops all entries that are of a genre we are not interested in
+# 1. Drops all entries that are not of a genre we are interested in
 # 2. Create a new column genre_family that contains generic genre name of the album
 # 3. Drops the genre column
-# 4. Remove all instances older than 1950 and creates a column referencing the 
+# 4. Remove all instances older than 1960 and creates a column referencing the 
 # decade of the album
 # 5. Drops the publicationDate column 
 # 6. Removes duplicates
@@ -83,6 +86,9 @@ artists_lite_choro <- as_tibble(artists_lite_choro) %>% distinct() %>%
 
 ### PRE-PROCESSING THE POPULATION DATASET
 
+# 1. Creates a column representing the decade where the population statistics was recorded
+# 2. drops unwanted columns
+# 3. average the population of each country over each decade
 pop_df <- population %>% 
   mutate(decade = case_when((Year>=1960 & Year<1970)~1960,
                             (Year>=1970 & Year<1980)~1970, 
@@ -98,15 +104,16 @@ pop_df <- pop_df %>% select(-c("Country.Name", "Group.1")) %>%
 
 ## CREATING THE JOINT DATA FRAME
 
-# 1. Merges artist_lite_choro and df_album on the id_artist column
+# 1. Merges artist_lite_choro and df_album with the values of id_artist column as keys
 # 2. rename location.country column to country
-# 3. replace NA with world
+# 3. replace NA with "world"
 # 4. lower case all country names and replaces the country names with formatted ones
 joined_df <- merge(x=df_album, y=artists_lite_choro, by="id_artist") %>% 
   rename("country"="location.country") %>% mutate(country = replace_na(country, "world")) %>% 
   mutate(country = tolower(country)) %>% subset(country !="world")
 
 standardize_country_names <- function(df, source_df) {
+  # Standardizes the names of the countries referenced in the Wasabi API
   df <- df %>% add_column(cleaned_country = NA)
   for (i in 1:nrow(df)) {
     for (j in 1:nrow(source_df)) {
@@ -119,16 +126,13 @@ standardize_country_names <- function(df, source_df) {
   return(df)
 }
 
+# Creates an intermediary data frame to process the data into a JSON
 joined_df <- standardize_country_names(joined_df, country_name_matcher)
 pop_df <- standardize_country_names(pop_df, country_name_matcher)
-
 joined_df <- joined_df %>% select(-c(id_artist))
-
 joined_df$count <- 1
-
 joined_df <- joined_df %>% group_by(decade, country, genre_family) %>% 
   summarise(count = n())
-
 joined_df <- merge(joined_df, pop_df, by=c("country","decade")) %>% 
   rename("population"="Value")
 
@@ -140,42 +144,43 @@ rm(df_album)
 rm(artists_lite_choro)
 
 create_json <- function(df) {
-  
+  # Stores the data and formats it to be exportable as a JSON file
+  # /!\ look for way to better the code
   entry <- list(rock=list(sixties=list(count=0,population=0),
-                               seventies=list(count=0,population=0),
-                               eighties=list(count=0,population=0),
-                               nineties=list(count=0,population=0),
-                               twothousands=list(count=0,population=0)),
+                              seventies=list(count=0,population=0),
+                              eighties=list(count=0,population=0),
+                              nineties=list(count=0,population=0),
+                              twothousands=list(count=0,population=0)),
                      metal=list(sixties=list(count=0,population=0),
-                                seventies=list(count=0,population=0),
-                                eighties=list(count=0,population=0),
-                                nineties=list(count=0,population=0),
-                                twothousands=list(count=0,population=0)),
+                              seventies=list(count=0,population=0),
+                              eighties=list(count=0,population=0),
+                              nineties=list(count=0,population=0),
+                              twothousands=list(count=0,population=0)),
                      punk=list(sixties=list(count=0,population=0),
-                               seventies=list(count=0,population=0),
-                               eighties=list(count=0,population=0),
-                               nineties=list(count=0,population=0),
-                               twothousands=list(count=0,population=0)),
+                              seventies=list(count=0,population=0),
+                              eighties=list(count=0,population=0),
+                              nineties=list(count=0,population=0),
+                              twothousands=list(count=0,population=0)),
                      country=list(sixties=list(count=0,population=0),
-                                  seventies=list(count=0,population=0),
-                                  eighties=list(count=0,population=0),
-                                  nineties=list(count=0,population=0),
-                                  twothousands=list(count=0,population=0)),
+                               seventies=list(count=0,population=0),
+                              eighties=list(count=0,population=0),
+                              nineties=list(count=0,population=0),
+                              twothousands=list(count=0,population=0)),
                      hip=list(sixties=list(count=0,population=0),
                               seventies=list(count=0,population=0),
                               eighties=list(count=0,population=0),
                               nineties=list(count=0,population=0),
                               twothousands=list(count=0,population=0)),
                      jazz=list(sixties=list(count=0,population=0),
-                               seventies=list(count=0,population=0),
-                               eighties=list(count=0,population=0),
-                               nineties=list(count=0,population=0),
-                               twothousands=list(count=0,population=0)),
+                              seventies=list(count=0,population=0),
+                              eighties=list(count=0,population=0),
+                              nineties=list(count=0,population=0),
+                              twothousands=list(count=0,population=0)),
                      electro=list(sixties=list(count=0,population=0),
-                                  seventies=list(count=0,population=0),
-                                  eighties=list(count=0,population=0),
-                                  nineties=list(count=0,population=0),
-                                  twothousands=list(count=0,population=0)
+                              seventies=list(count=0,population=0),
+                              eighties=list(count=0,population=0),
+                              nineties=list(count=0,population=0),
+                              twothousands=list(count=0,population=0)
   ))
   
   processed_countries <- c("nullcountry")
@@ -320,13 +325,8 @@ merge_files(INPUT_FOLDER = "./data/", CONCAT_DELIMITER=",",
 
 file <- paste("[",read_file("music-data.txt"),"]",sep="")
 write(file, "music-data.txt")
-  
-# Removes superfluous data frame
-rm(albums)
-rm(artists)
-rm(albums_lite_choro)
-rm(df_album)
-rm(artists_lite_choro)
+
+## PROCESSING THE JOINED_DF INTO A TOTAL REFERENCED BAND PER GENRE TABLE
 
 genre_df <- joined_df %>% select(-c(population))
 genre_df <- aggregate(genre_df$count, 
@@ -336,7 +336,8 @@ genre_df <- genre_df %>% rename("decade"="Group.1",
                                   "genre"="Group.2")
 
 create_genre_json <- function(df) {
-  
+  # Stores the data and formats it to be exportable as a JSON file
+  # /!\ look for way to better the code
   entry <- list(rock=list(sixties=0,seventies=0,eighties=0,nineties=0,twothousands=0),
                 metal=list(sixties=0,seventies=0,eighties=0,nineties=0,twothousands=0),
                 punk=list(sixties=0,seventies=0,eighties=0,nineties=0,twothousands=0),
@@ -345,7 +346,6 @@ create_genre_json <- function(df) {
                 jazz=list(sixties=0,seventies=0,eighties=0,nineties=0,twothousands=0),
                 electro=list(sixties=0,seventies=0,eighties=0,nineties=0,twothousands=0)
                 )
-  
   for (line in 1:nrow(df)) {
     if (df$decade[line]==1960){
       if (df$genre[line]=="rock"){
@@ -435,6 +435,7 @@ create_genre_json <- function(df) {
 
 create_genre_json(genre_df)
 
+# Formats the string of the JSON file
 file <- paste("[",read_file("genre-summary.txt"),"]",sep="")
 file <- str_replace(file, '\"rock\":', '{\"name\":\"rock\", \"data\":')
 file <- str_replace(file, '\"metal\":', '{\"name\":\"metal\", \"data\":')
@@ -446,4 +447,3 @@ file <- str_replace(file, '\"electro\":', '{\"name\":\"electro\", \"data\":')
 file <- str_replace_all(file, "\\},", "\\}\\},")
 file <- str_replace(file, '\\[\\{\\{','\\[\\{')
 write(file, "genre-summary.txt")
-

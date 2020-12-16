@@ -26,6 +26,8 @@ window.rendering = {
   lowerBound: -1,
   upperBound: 15,
   dataDefault: 0,
+  counter: 0,
+  dec: ["sixties", "seventies", "eighties", "nineties","two_thousands"]
 };
 
 const colorSchemeMap = {
@@ -194,7 +196,7 @@ let processRaw = (raw) => {
                 let name = d.properties.name;
                 if (name.toLowerCase() in data) {
                   let c = fillCountryColor(tryCatchRenderProcessing(d.properties));
-                  d3.select("body").style("background-color", chroma(c).alpha(0.75));
+                  d3.select("body").style("background-color", chroma(c).alpha(0.2));
                 } else {
                   d3.select("body").style("background-color", "");
                 }
@@ -216,8 +218,9 @@ let processRaw = (raw) => {
             // for (let country in data) {
             //   if (!data[country].used) console.warn("Unused country", country);
             // }
-          };
 
+          };
+         
           // ---------------------------------------------------------------------------
           // Lists the methods of type 'decades'
           let decades = {
@@ -227,8 +230,8 @@ let processRaw = (raw) => {
                 rendering.time = "twothousands";
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -256,8 +259,8 @@ let processRaw = (raw) => {
                 rendering.time = "nineties";
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -284,8 +287,8 @@ let processRaw = (raw) => {
                 rendering.time = "eighties";
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -312,8 +315,8 @@ let processRaw = (raw) => {
                 rendering.time = "seventies";
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -340,8 +343,8 @@ let processRaw = (raw) => {
                 rendering.time = "sixties";
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -377,8 +380,8 @@ let processRaw = (raw) => {
                 rendering.upperBound = 10;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -408,8 +411,8 @@ let processRaw = (raw) => {
                 rendering.upperBound = 30;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -439,8 +442,8 @@ let processRaw = (raw) => {
                 rendering.upperBound = 5;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -471,8 +474,8 @@ let processRaw = (raw) => {
                 rendering.upperBound = 3;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -503,8 +506,8 @@ let processRaw = (raw) => {
                 rendering.upperBound = 60;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -534,8 +537,8 @@ let processRaw = (raw) => {
                 rendering.upperBound = 2;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
-              },
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
+                },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
                 let countryName = dProp.name.toLowerCase();
@@ -565,7 +568,7 @@ let processRaw = (raw) => {
                 rendering.upperBound = 30;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
-                  (data["world"].data["rock"][rendering.time]["population"] / 1000000);
+                  (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
               },
               // Update function for the statistics that will be displayed on the choropleth
               formula: (dProp) => {
@@ -591,6 +594,7 @@ let processRaw = (raw) => {
 
           // loads the <musicGenres> method in the choropleth
           for (let musicGenre in musicGenres) {
+
             d3.select(".musicGenres")
               .append("input")
               .attr("type", "radio")
@@ -610,7 +614,7 @@ let processRaw = (raw) => {
             d3.select(".decades")
               .append("input")
               .attr("type", "radio")
-              .attr("name", "method-ratio")
+              .attr("name", "method-ratio1")
               .attr("id", decade)
               .on("click", () => render(decades[decade]));
 
@@ -619,10 +623,40 @@ let processRaw = (raw) => {
               .attr("for", decade)
               .attr("class", "clickable")
               .text(decades[decade].properties.abbv);
-          }
+          };
+          
+          function functest2 () {
+            setTimeout(function () {
+                document.querySelector('label[for="'+rendering.dec[rendering.counter]+'"]').click();
+                rendering.counter++;
+                if (rendering.counter < rendering.dec.length) {
+                    functest2();
+                }; 
+            }, 1000); // change this time (in milliseconds) to whatever you desire
+        };
 
-          // Initiates the first render on the label 'rock'
+          function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+              currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+          };
+
+          d3.select("#play-button")
+            .attr("id", "play-button")
+            .attr("class", "clickable")
+            .on("click", () => { 
+              functest2();
+              rendering.counter = 0;
+            }
+          );
+
+
+          // Initiates the first render on the label 'rock' and 'two_thousands'
           document.querySelector('label[for="rock"]').click();
+          document.querySelector('label[for="two_thousands"]').click();
+
         });
     });
 };

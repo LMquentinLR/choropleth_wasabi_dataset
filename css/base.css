@@ -136,7 +136,7 @@ svg-frame {
   font-size: 50px;
 }
 .desc {
-  width: 130px;
+  width: 150px;
 }
 
 .musicGenres {
@@ -178,7 +178,7 @@ strong, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
 }
 .grad-bar {
-  height: 5px;
+  height: 10px;
   width: 180px;
   transition: all 0.2s;
 }
@@ -206,7 +206,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-  color: #eee;
+  color: rgb(129, 112, 226);
 }
 
 input[type="radio"] + label:before {
@@ -215,6 +215,26 @@ input[type="radio"] + label:before {
   display: inline-block;
   transform: scale(1.5);
 }
+
+#play-button {
+  /* position: absolute; */
+  top: 140px;
+  left: 50px;
+  background: #f08080;
+  padding-right: 26px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  margin: 0;
+  padding: 0 12px;
+  width: 60px;
+  /* cursor: pointer; */
+  height: 30px;
+}
+
+#play-button:hover {
+  background-color: #696969;
+} 
 
 @media screen and (max-width: 701px) {
   svg-frame {

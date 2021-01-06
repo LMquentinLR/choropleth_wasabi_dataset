@@ -138,6 +138,7 @@ let processRaw = (raw) => {
                 return "#222";
               })
               .attr("d", path)
+
               // mouseover function
               // Casts the name, rate and tooltip affiliated to a country when hovered on
               .on("mouseover", (d) => {
@@ -149,6 +150,7 @@ let processRaw = (raw) => {
                       method.properties.toFixed
                     )
                   );
+
                   // Creates a tooltip for the case when data is available
                   let tooltipCount =
                   data[name.toLowerCase()].data[rendering.genre][rendering.time]["count"];
@@ -177,7 +179,8 @@ let processRaw = (raw) => {
                     // Creates a tooltip for the case when no data is available
                     let tooltipText = 
                       `No "${rendering.genre}" band was referenced during the period in ${name}.`;
-                    // Formats the tooltip to be included in the choropleth
+                    
+                      // Formats the tooltip to be included in the choropleth
                     tip.html(tooltipText)
                       .transition()
                       .duration(600)
@@ -202,7 +205,6 @@ let processRaw = (raw) => {
                 }
               })
               // mouseout function
-
               .on("mouseout", () => {
                 resetRegion();
                 // tooltip transition on moving out of the current location
@@ -252,7 +254,6 @@ let processRaw = (raw) => {
                 toFixed: 2,
               },
             },
-
             nineties: {
               // Update function for the global variables that formats the choropleth (e.g. legend)
               updateGlobal: () => {
@@ -651,7 +652,6 @@ let processRaw = (raw) => {
               rendering.counter = 0;
             }
           );
-
 
           // Initiates the first render on the label 'rock' and 'two_thousands'
           document.querySelector('label[for="rock"]').click();

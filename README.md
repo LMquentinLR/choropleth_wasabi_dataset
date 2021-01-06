@@ -3,7 +3,7 @@
 ### About
 
 Visualization of the WASABI music dataset.
-![preview](./assets/image_markdown.PNG)
+![preview](./assets/image_markdown.png)
 
 ### Acknowledgement
 

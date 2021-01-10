@@ -21,7 +21,7 @@ npm install -g parcel-bundler # if you haven't installed it yet
 parcel index.html
 ```
 
-![mounting](./assets/mounting.gif)
+![mounting](./assets/mount.gif)
 
 
 ### Acknowledgement

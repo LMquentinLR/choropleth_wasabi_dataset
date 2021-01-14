@@ -16,8 +16,9 @@ Data visualization of the deep learning WASABI songs & artists dataset displayin
 ```sh
 # Mounting the website
 
+sudo apt install npm # if not yet installed
 npm i
-npm install -g parcel-bundler # if you haven't installed it yet
+sudo npm install -g parcel-bundler # if not yet installed
 parcel index.html
 ```
 
@@ -27,3 +28,5 @@ parcel index.html
 ### Acknowledgement
 
 This visualization would not have been possible without the code kindly provided by Tzingtao Chow [here](https://github.com/ncovis/choropleth).
+
+Thanks to [enricobachiorrini](https://github.com/enricobachiorrini) for helping with a nifty global variable issue.

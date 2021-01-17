@@ -471,8 +471,8 @@ let processRaw = (raw) => {
                 rendering.genre = "country";
                 rendering.description =
                   "Country, folk & reggae bands referenced per 1m people";
-                rendering.lowerBound = -1;
-                rendering.upperBound = 3;
+                rendering.lowerBound = -0.1;
+                rendering.upperBound = 50;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
                   (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data
@@ -534,8 +534,8 @@ let processRaw = (raw) => {
               updateGlobal: () => {
                 rendering.genre = "jazz";
                 rendering.description = "Jazz bands referenced per 1m people";
-                rendering.lowerBound = -1;
-                rendering.upperBound = 2;
+                rendering.lowerBound = -0.01;
+                rendering.upperBound = 10;
                 rendering.dataDefault =
                   dataGenre[rendering.genre].data[rendering.time] /
                   (data["world"].data["rock"][rendering.time]["population"] / 1000000); // leave "rock" for pop data

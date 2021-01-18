@@ -2,7 +2,7 @@
 
 ### About
 
-Data visualization of the deep learning WASABI songs & artists dataset displaying:
+Data visualization of the deep learning [WASABI songs & artists dataset](https://github.com/micbuffa/WasabiDataset) displaying:
 
 - an interactive choropleth map displaying the amount and concentration of music bands per country, decade and main genre since 1960
 
@@ -15,11 +15,11 @@ Data visualization of the deep learning WASABI songs & artists dataset displayin
 
 ```sh
 # Mounting the website
-
-sudo apt install npm # if not yet installed
-npm i
-sudo npm install -g parcel-bundler # if not yet installed
-parcel index.html
+$ git clone https://github.com/LMquentinLR/choropleth_wasabi_dataset.git
+$ sudo apt install npm
+$ npm i
+$ sudo npm install -g parcel-bundler
+$ parcel index.html
 ```
 
 ![mounting](./assets/mount.gif)

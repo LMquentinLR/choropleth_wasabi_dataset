@@ -13,9 +13,15 @@
 	
     \section*{Introduction}
     
-    The following document proposes an evaluation protocol to assess the usability of a Data Visualization application that relies on the deep learning WASABI dataset.
+    The following document proposes an evaluation protocol to assess the usability of a Data Visualization application that relies on the deep learning WASABI dataset (See Fig \ref{fig:a}).
     \newline\newline
     The application is a web page displaying a Choropleth map, coded with the D3.js Javascript library. It is available on Github\footnote{\href{https://github.com/LMquentinLR/choropleth\_wasabi\_dataset}{Link to Github}}.
+    \newline\newline
+    As a reminder, a Choropleth map displays divided geographical areas or regions that are coloured, shaded or patterned in relation to a data variable. This provides a way to visualise values over a geographical area, which can show variation or patterns across the displayed location.
+    
+    \begin{figure}	\includegraphics[width=0.98\linewidth]{map.png}
+    \caption{Choropleth Map implementation\label{fig:a}}
+    \end{figure}
     
     \section*{Evaluation Format}
 
@@ -104,12 +110,12 @@
     \end{itemize}
     
     \begin{figure}	\includegraphics[width=0.98\linewidth]{SUS.png}
-    \caption{Original System Usability Scale questionnaire\label{fig:a}}
+    \caption{Original System Usability Scale questionnaire\label{fig:b}}
     \end{figure}
 
     \section*{System Usability Scale survey}
     
-    Once the tasks have been completed or attempted, the participant is given a post-task survey. The one used in this project follows the \textbf{System Usability Scale} standard (see Fig. \ref{fig:a}) from J. Brooke\cite{brook}. It is a standard questionnaire used for assessing the overall usability of a system/tool/etc. Based on the contained 10 standard questions (see Annex 6), it allows to calculate a score from 0 to 100 (from worst to best) to inform testers/observers of the overall usability and efficient learning of a system/tool/etc. by a novice user.
+    Once the tasks have been completed or attempted, the participant is given a post-task survey. The one used in this project follows the \textbf{System Usability Scale} standard (see Fig. \ref{fig:b}) from J. Brooke\cite{brook}. It is a standard questionnaire used for assessing the overall usability of a system/tool/etc. Based on the contained 10 standard questions (see Annex 6), it allows to calculate a score from 0 to 100 (from worst to best) to inform testers/observers of the overall usability and efficient learning of a system/tool/etc. by a novice user.
     
     \section*{End Questionnaire}
     
@@ -117,7 +123,11 @@
 
     \section*{Data Visualization Results}
     
-    \textbf{}
+    \textbf{Based on a preliminary run through a single person, the application yielded a SUS score of 85 out of 100}. Overall, the test participant found the application easy to navigate, finding difficulties not in the tool but the way the evaluation was organized -- notably that the questions were asked by voice rather than printed on paper.
+    
+    The main criticism the application received was related to the color scale of a genre ("Jazz") which was not sharp enough. The second criticism is related to the zoom function which is reset every time the user changes a parameter.  
+    
+    \section*{Annex 0 - Shape of the Choropleth map}
 
     \section*{Annex 1 - Introduction to the Choropleth evaluation}
     

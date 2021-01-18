@@ -15,9 +15,13 @@
     
     The following document proposes an evaluation protocol to assess the usability of a Data Visualization application that relies on the deep learning WASABI dataset (See Fig \ref{fig:a}).
     \newline\newline
-    The application is a web page displaying a Choropleth map, coded with the D3.js Javascript library. It is available on Github\footnote{\href{https://github.com/LMquentinLR/choropleth\_wasabi\_dataset}{Link to Github}}.
+    The application is a web page displaying a Choropleth map, coded with the D3.js Javascript library. 
     \newline\newline
     As a reminder, a Choropleth map displays divided geographical areas or regions that are coloured, shaded or patterned in relation to a data variable. This provides a way to visualise values over a geographical area, which can show variation or patterns across the displayed location.
+    \begin{quote}
+        The user can display the total population of, and the total number of bands within, each country available in the world (along with a per capita ratio and market share in \%) over a range of decades (1960s to the 2000s) and among seven genre families (rock, metal, punk, country\&folk, hip-hop\&rap, jazz, and electro).
+    \end{quote}
+    It is available on Github\footnote{\href{https://github.com/LMquentinLR/choropleth\_wasabi\_dataset}{Link to Github}}.
     
     \begin{figure}	\includegraphics[width=0.98\linewidth]{map.png}
     \caption{Choropleth Map implementation\label{fig:a}}
@@ -37,7 +41,7 @@
 
     \subsection*{Participant-Oriented Evaluation Method}
     
-    We choose a participant-oriented method with the following question as our driver: 
+    We choose a participant-oriented method with the following user-oriented hypothesis as our driver: 
     
     \begin{quote}
         Can a participant complete a set of increasingly demanding tasks on a data visualization format they have never encountered before?
@@ -47,7 +51,7 @@
 
     \subsection*{Hypothesis Regarding The Data Visualization Format}
  
-    The experimental design is not duplicated between various forms of UI or between different conditions. As such, there are no hypothesis associated with the current implementation of a data visualization.
+    The experimental design is not duplicated between various forms of UI or between different conditions. As such, there is no hypothesis associated with the current UI implementation of a data visualization.
  
     \subsection*{Metrics}
     
@@ -71,14 +75,14 @@
         \item \textit{Each of the following steps must be preceded with asking the participant if they have any questions, are comfortable, and wish to proceed}
         \item Introducing the participant to:
         \begin{itemize}
-            \item the \textbf{evaluation process}: reason(s) for evaluating participants on the future task, goals of compiling their data (see Annex 1)
-            \item the \textbf{context}: They will be tested on a Data Visualization application (see Annex 2)
+            \item the \textbf{evaluation process}: reason(s) for evaluating participants on the application, goals for compiling their data (see Annex 1)
+            \item the \textbf{context}: they will be tested on a Data Visualization application (see Annex 2)
             \item the \textbf{place}: the testing area
             \item the \textbf{hardware setup}, e.g., computer monitor (output to the participant), mouse (input from the participant), the means of observation of the participant and (mouse tracker, camera, etc.)
         \end{itemize}
-        \item Have the participant sign all required disclosure agreements or letters of understanding (see Annex 3)
+        \item Have the participant sign the disclosure agreement/letter of understanding (see Annex 3)
         \item Have the participant answer a profile questionnaire before starting the tasks (see Annex 4)
-        \item The tester/observer removes themselves from the test area, and mentioned to the participant they can start
+        \item The tester/observer removes themselves from the test area, and mentions to the participant that they can start
         \item The participant reveals their instructions and proceeds (see Annex 5)
         \item Once each task is performed, the tester/observer comes back to the test area
         \item Have the participant answer a system usability survey (see Fig. 1, and Annex 6) and a post-task questionnaire (see Annex 7)
@@ -90,7 +94,7 @@
     During the first part of the test, and after a disclosure agreement/letter of understanding has been signed (see Annex 3), the participant is invited to complete a questionnaire split in two parts (see Annex 4):
     \begin{itemize}
         \item \textbf{Participant info}: Name, contact information, etc. which make the participant reachable
-        \item \textbf{Participant prior experience} (meant to help size the participant's profile)
+        \item \textbf{Participant prior experience} (meant to help understand the participant's profile)
         % \begin{itemize}
         %     \item Do you play a music instrument? [Y]/[N]
         %     \item Are you subscribed to an audio streaming platform? [Y]/[N]
@@ -126,21 +130,19 @@
     \textbf{Based on a preliminary run through a single person, the application yielded a SUS score of 85 out of 100}. Overall, the test participant found the application easy to navigate, finding difficulties not in the tool but the way the evaluation was organized -- notably that the questions were asked by voice rather than printed on paper.
     
     The main criticism the application received was related to the color scale of a genre ("Jazz") which was not sharp enough. The second criticism is related to the zoom function which is reset every time the user changes a parameter.  
-    
-    \section*{Annex 0 - Shape of the Choropleth map}
 
     \section*{Annex 1 - Introduction to the Choropleth evaluation}
     
     \begin{quote}
         "Welcome, my name is [tester/observer]. We are going to walk you through today's session. It should take between twenty and thirty minutes of your time. Our purpose is to evaluate the usability and engagement of participants towards a newly developed Data Visualization tool. This tool will allow you to explore data related to music genres across the world and decades.
         \newline\newline
-        Before we proceed, we want to thank you for clearing your time schedule for us. Your input is valuable for our research and will help up determine the current state of our development and where to improve the tool."
+        Before we proceed, we want to thank you for clearing your time schedule for us. Your input is valuable for our research and will help us determine the current state of our development and where to improve the tool."
     \end{quote}
     
     \section*{Annex 2 - Statement of purpose for the Choropleth evaluation}
     
     \begin{quote}
-        "This session is organized in a few steps, the first of which is asking you to review a document called a 'Letter of Understanding' that will describe the goal of your participation. If you agree to it and sign it -- it works as consent --, we will then proceed with a questionnaire that will ask you about your demographics and background. Once filled, we will ask you to take seat in front of a computer and follow a series of tasks to accomplish on an application that will be displayed on a monitor. The application itself is displayed inside a web browser such as Internet Explorer or Google Chrome. You will be given a mouse and keyboard to perform those tasks. 
+        "This session is organized in a few steps, the first of which is asking you to review a document called a 'Letter of Understanding' that will describe the goal of your participation. If you agree to it and sign it -- it works as consent --, we will then proceed with a questionnaire that will ask you about your personal background. Once filled, we will ask you to take seat in front of a computer and try accomplishing a series of tasks on an application that will be displayed on the monitor. The application itself is displayed inside a web browser such as Internet Explorer or Google Chrome. You will be given a mouse and keyboard to perform those tasks. 
         \newline\newline
         While performing those tasks, your reactions and movements will be recorded to assess your primary reaction to the application. Please note that there are no wrong ways to arrive an an answer. As you are performing the task, we will ask you to speak out loud your thought process and remarks as often as possible. The goal is to capture your thought process, what you are looking at, what you are trying to do. This is a tremendous help for our research.
         \newline\newline
@@ -196,7 +198,7 @@
         \newline\newline
         The color gradient represents the concentration of bands in a country.
         \newline\newline
-        Please find below a series of tasks to complete. you may stop at any time. Please remember to think out loud whenever possible to walk us through your mental process. Good luck!"
+        Please find below a series of tasks to complete. You may stop at any time. Please remember to think out loud whenever possible to walk us through your mental process. Good luck!"
     \end{quote}
     
     \subsection*{Tasks}
